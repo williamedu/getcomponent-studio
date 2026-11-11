@@ -299,3 +299,17 @@ ul { list-style: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* Pixel Agent Department: tarjeta a todo el ancho con una captura apaisada, y los enlaces legales del pie */
+.app--wide { grid-column: 1 / -1; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); padding-bottom: 28px; align-items: center; }
+.app--wide .app__copy { padding-bottom: 0; }
+.app--wide .stores { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.app__shot { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); image-rendering: pixelated; }
+.footer__legal { display: flex; flex-wrap: wrap; gap: 8px 20px; flex-basis: 100%; }
+.footer__legal a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.footer__legal a:hover { color: var(--text); }
+@media (max-width: 900px) { .app--wide { grid-template-columns: 1fr; } }
+.pad__top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.pad__top .card__icon { margin-bottom: 0; }
+.pad__redes { display: flex; gap: 10px; }
+.pad__redes img { width: 36px; height: 36px; image-rendering: pixelated; }

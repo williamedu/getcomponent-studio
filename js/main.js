@@ -44,6 +44,10 @@
     'studio.v3t': 'For everyone', 'studio.v3': 'Games translated into up to 11 languages.',
     'contact.title': "Let's talk", 'contact.lead': 'Press, collaborations, publishing or just to say hi.',
     'footer.rights': 'All trademarks belong to their owners.',
+    'footer.privacy': 'Privacy Policy', 'footer.terms': 'Terms of Service', 'footer.sale': 'Terms of Sale', 'footer.delete': 'Delete my data',
+    'pad.sub': 'Your office that posts for you · PC (Windows)',
+    'pad.text': 'A pixel-art office that works on your social media for you. Its staff cut your long videos into clips, add subtitles, write titles and descriptions, and publish them on YouTube, Instagram and TikTok at the time you choose. They can also reply to people who comment on your videos. Everything runs on your PC and nothing is published without your approval.',
+    'pad.more': 'Learn more →', 'pad.privacy': 'Privacy Policy →', 'pad.terms': 'Terms →',
   };
   const nodes = $$('[data-i18n]');
   const es = Object.fromEntries(nodes.map(n => [n.dataset.i18n, n.textContent]));
