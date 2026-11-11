@@ -1,0 +1,112 @@
+/* Pixel Agent Department: web pública (inicio, términos, privacidad). Sin fuentes ni scripts externos. */
+:root {
+  --papel: #f4efe4;
+  --tarjeta: #fffdf8;
+  --tinta: #2a2433;
+  --suave: #5d566b;
+  --borde: #2a2433;
+  --verde: #2fa58f;
+  --verde-osc: #1f7a69;
+  --amarillo: #f2c94c;
+  --rosa: #d9338f;
+  --rojo: #d93a2b;
+  --cian: #2ad4d9;
+  --sombra: #c9bfa9;
+  --pixel: 4px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: #1d1a24;
+    --tarjeta: #2a2633;
+    --tinta: #f1ece2;
+    --suave: #bdb5c9;
+    --borde: #0e0c12;
+    --sombra: #0e0c12;
+    --verde-osc: #6fe0c9;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+img { max-width: 100%; height: auto; image-rendering: pixelated; }
+a { color: var(--verde-osc); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+code { font: 0.92em ui-monospace, Consolas, monospace; background: rgba(127,127,127,.15); padding: 0 .25em; border-radius: 3px; }
+
+.envoltura { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+.cabecera { background: var(--tarjeta); border-bottom: var(--pixel) solid var(--borde); }
+.cabecera .envoltura { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+.marca { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--tinta); text-decoration: none; letter-spacing: .02em; }
+.marca img { width: 40px; height: 40px; }
+.menu { margin-left: auto; display: flex; gap: 6px 16px; flex-wrap: wrap; font-size: 15px; }
+.menu a { color: var(--tinta); text-decoration: none; font-weight: 600; }
+.menu a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: var(--verde); }
+
+.idiomas { display: flex; gap: 8px; margin: 20px 0 0; font-size: 15px; }
+.idiomas a { border: 3px solid var(--borde); background: var(--tarjeta); color: var(--tinta); padding: 2px 10px; text-decoration: none; font-weight: 700; box-shadow: 3px 3px 0 var(--sombra); }
+
+.portada { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; padding: 36px 0 12px; }
+.portada h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.15; margin: 0 0 12px; }
+.portada p { margin: 0 0 16px; color: var(--suave); font-size: 18px; }
+.marco { border: var(--pixel) solid var(--borde); box-shadow: 6px 6px 0 var(--sombra); background: var(--tarjeta); display: block; }
+
+.boton { display: inline-block; border: 3px solid var(--borde); background: var(--verde); color: #fff; font-weight: 800; padding: 8px 16px; text-decoration: none; box-shadow: 4px 4px 0 var(--sombra); }
+.boton.claro { background: var(--tarjeta); color: var(--tinta); }
+
+.redes { display: flex; gap: 10px; flex-wrap: wrap; margin: 6px 0 18px; padding: 0; list-style: none; }
+.redes li { display: flex; align-items: center; gap: 6px; border: 3px solid var(--borde); background: var(--tarjeta); padding: 2px 10px; font-weight: 700; font-size: 15px; }
+.redes i { width: 14px; height: 14px; display: inline-block; border: 2px solid var(--borde); }
+
+section { padding: 18px 0; }
+h2 { font-size: 26px; margin: 28px 0 10px; }
+h3 { font-size: 19px; margin: 22px 0 6px; }
+.pasos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 0; list-style: none; counter-reset: paso; }
+.pasos li { background: var(--tarjeta); border: 3px solid var(--borde); padding: 12px; box-shadow: 4px 4px 0 var(--sombra); counter-increment: paso; }
+.pasos li::before { content: counter(paso); display: inline-block; background: var(--amarillo); color: #2a2433; border: 2px solid var(--borde); font-weight: 800; width: 28px; text-align: center; margin-bottom: 6px; }
+.galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.galeria figure { margin: 0; }
+.galeria figcaption { font-size: 14px; color: var(--suave); margin-top: 6px; }
+
+.documento { background: var(--tarjeta); border: var(--pixel) solid var(--borde); box-shadow: 6px 6px 0 var(--sombra); padding: 8px 28px 24px; margin: 24px 0 36px; }
+.documento h1 { font-size: clamp(26px, 4.5vw, 36px); margin: 18px 0 4px; }
+.fecha { color: var(--suave); font-size: 15px; margin-top: 0; }
+.documento table { border-collapse: collapse; width: 100%; font-size: 15px; display: block; overflow-x: auto; }
+.documento th, .documento td { border: 2px solid var(--sombra); padding: 6px 8px; text-align: left; vertical-align: top; }
+.documento th { background: rgba(127,127,127,.12); }
+.nota { border-left: 6px solid var(--amarillo); background: rgba(242,201,76,.14); padding: 8px 12px; }
+.pendiente { background: #ffe08a; color: #2a2433; padding: 0 4px; font-weight: 700; }
+
+.pie { border-top: var(--pixel) solid var(--borde); background: var(--tarjeta); padding: 18px 0 28px; font-size: 15px; color: var(--suave); }
+.pie nav { display: flex; gap: 6px 16px; flex-wrap: wrap; margin-bottom: 8px; }
+
+@media (max-width: 900px) {
+  .pasos { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .pasos { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  /* La tabla de permisos se apila: cada celda es un bloque */
+  .documento table, .documento tbody, .documento tr, .documento td { display: block; width: 100%; }
+  .documento tr:first-child { display: none; }
+  .documento tr { border-top: 3px solid var(--borde); padding: 6px 0; }
+  .documento td { border: 0; padding: 2px 0; }
+  .documento td[rowspan] { font-weight: 800; font-size: 17px; padding-top: 8px; }
+}
+@media (max-width: 760px) {
+  .portada { grid-template-columns: 1fr; padding-top: 22px; }
+  .galeria { grid-template-columns: 1fr; }
+  .documento { padding: 4px 16px 18px; }
+  .menu { margin-left: 0; width: 100%; }
+}
+
+/* Marca del estudio (Google exige que el nombre de la app, GetComponent Studio, se vea en la web) */
+.marca .nombres { display: flex; flex-direction: column; line-height: 1.15; }
+.marca .estudio { font-weight: 800; }
+.marca .producto { font-weight: 600; font-size: 13px; color: var(--suave); }
+.presenta { margin: 0 0 8px; font-size: 15px; color: var(--suave); text-transform: uppercase; letter-spacing: .06em; }
