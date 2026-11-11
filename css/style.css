@@ -363,3 +363,11 @@ ul { list-style: none; }
   .wall { margin-top: 90px; min-height: 0; }
   .wall__phone { width: 170px; margin: -90px 0 8px; align-self: center; }
 }
+
+/* Wallsmith poster v4: phone overhangs less */
+.wall { margin-top: clamp(40px, 5vw, 72px); }
+.wall__phone { margin-top: clamp(-52px, -3vw, -28px); }
+@media (max-width: 760px) {
+  .wall { margin-top: 56px; }
+  .wall__phone { margin: -44px 0 8px; }
+}
