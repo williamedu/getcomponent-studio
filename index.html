@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GetComponent Studio — Videojuegos y simuladores</title>
+<meta name="description" content="GetComponent Studio crea videojuegos y simuladores: Americas Tower Simulator, The Knight of The Kingdom, Wallsmith, Duck Swing y más.">
+<meta name="theme-color" content="#07090a">
+<meta property="og:title" content="GetComponent Studio">
+<meta property="og:description" content="Videojuegos y simuladores hechos con obsesión por el detalle.">
+<meta property="og:image" content="assets/steam/kok-header.jpg">
+<link rel="icon" type="image/png" href="assets/brand/frog.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=JetBrains+Mono:wght@400;600&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="GetComponent Studio">
+    <img src="assets/brand/frog.png" alt="" width="40" height="34">
+    <span><b>GET</b>COMPONENT <i>Studio</i></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#juegos" data-i18n="nav.games">Juegos</a>
+    <a href="#movil" data-i18n="nav.mobile">Móvil</a>
+    <a href="#apps" data-i18n="nav.apps">Apps</a>
+    <a href="#estudio" data-i18n="nav.studio">Estudio</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+  </nav>
+  <div class="nav__right">
+    <button class="lang" id="lang" aria-label="Cambiar idioma / Switch language"><span class="on">ES</span><span>EN</span></button>
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__media" aria-hidden="true">
+    <video class="on" src="assets/steam/kok-loop.mp4" poster="assets/steam/kok-hero.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="assets/steam/ats-loop.mp4" poster="assets/steam/ats-hero.jpg" muted loop playsinline preload="none"></video>
+  </div>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <img class="hero__frog" src="assets/brand/frog.png" alt="" width="560" height="480">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Estudio independiente de videojuegos</p>
+    <h1 class="hero__title">
+      <span class="line"><span data-i18n="hero.t1">Simulamos la realidad.</span></span>
+      <span class="line"><span class="grad" data-i18n="hero.t2">Inventamos mundos.</span></span>
+    </h1>
+    <p class="hero__lead" data-i18n="hero.lead">De la torre de control de un aeropuerto a un reino cubierto de niebla. Creamos videojuegos y simuladores para PC y móvil.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#juegos" data-i18n="hero.cta1">Ver los juegos</a>
+      <a class="btn btn--ghost" href="https://store.steampowered.com/app/3325870/The_Knight_of_The_Kingdom/" target="_blank" rel="noopener" data-i18n="hero.cta2">Jugar la demo en Steam</a>
+    </div>
+  </div>
+
+  <div class="hero__now" aria-hidden="true">
+    <span class="dot"></span><span id="nowPlaying">The Knight of The Kingdom</span>
+  </div>
+  <a class="hero__scroll" href="#juegos" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Simuladores</span><i>✦</i><span>RPG de acción</span><i>✦</i><span>Estrategia</span><i>✦</i><span>Arcade</span><i>✦</i><span>Pixel art</span><i>✦</i><span>PC · Steam</span><i>✦</i><span>iOS · Android</span><i>✦</i>
+    <span>Simuladores</span><i>✦</i><span>RPG de acción</span><i>✦</i><span>Estrategia</span><i>✦</i><span>Arcade</span><i>✦</i><span>Pixel art</span><i>✦</i><span>PC · Steam</span><i>✦</i><span>iOS · Android</span><i>✦</i>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats wrap">
+  <div class="stat reveal"><b data-count="2">2</b><span data-i18n="stats.pc">juegos de PC en desarrollo</span></div>
+  <div class="stat reveal"><b data-count="3">3</b><span data-i18n="stats.mobile">juegos móviles</span></div>
+  <div class="stat reveal"><b data-count="2">2</b><span data-i18n="stats.apps">apps publicadas</span></div>
+  <div class="stat reveal"><b data-count="11">11</b><span data-i18n="stats.langs">idiomas</span></div>
+</section>
+
+<!-- GAMES INTRO -->
+<section class="intro wrap" id="juegos">
+  <p class="eyebrow reveal" data-i18n="games.eyebrow">En desarrollo · Steam</p>
+  <h2 class="h2 reveal" data-i18n="games.title">Dos mundos. Un mismo estudio.</h2>
+</section>
+
+<!-- ATS -->
+<section class="game game--ats" id="ats">
+  <div class="game__bg" style="background-image:url(assets/steam/ats-3.jpg)" aria-hidden="true"></div>
+  <div class="radar" aria-hidden="true"><i></i><i></i><i></i><b></b><em style="--x:62%;--y:30%"></em><em style="--x:28%;--y:58%"></em><em style="--x:71%;--y:70%"></em></div>
+  <div class="wrap game__grid">
+    <div class="game__copy">
+      <p class="tag tag--mono reveal"><span class="dot"></span><span data-i18n="ats.tag">SIMULADOR · EN DESARROLLO</span></p>
+      <h3 class="game__title game__title--ats reveal">Americas Tower<br>Simulator</h3>
+      <p class="game__lead reveal" data-i18n="ats.lead">Toma el control de la torre. Autoriza despegues, ordena aterrizajes y mantén a salvo cada vuelo con procedimientos reales de control de tránsito aéreo.</p>
+      <ul class="feats feats--mono reveal">
+        <li><b>20+</b><span data-i18n="ats.f1">niveles con situaciones de la vida real</span></li>
+        <li><b>ATC</b><span data-i18n="ats.f2">procedimientos reales de controladores</span></li>
+        <li><b>★★★</b><span data-i18n="ats.f3">insignias por cada nivel perfecto</span></li>
+        <li><b>MAYDAY</b><span data-i18n="ats.f4">fallas de radio, emergencias y amenazas</span></li>
+      </ul>
+      <div class="game__cta reveal">
+        <a class="btn btn--ats" href="https://store.steampowered.com/app/2057500/Americas_Tower_Simulator/" target="_blank" rel="noopener" data-i18n="cta.wishlist">Añadir a la lista de deseados</a>
+        <span class="platform">PC · Steam</span>
+      </div>
+    </div>
+    <div class="game__shots reveal">
+      <button class="shot shot--main" data-full="assets/steam/ats-7.jpg"><img src="assets/steam/ats-7.jpg" alt="Americas Tower Simulator: vista desde la torre" loading="lazy"></button>
+      <div class="shot__row">
+        <button class="shot" data-full="assets/steam/ats-1.jpg"><img src="assets/steam/ats-1.jpg" alt="Emergencia en pista" loading="lazy"></button>
+        <button class="shot" data-full="assets/steam/ats-3.jpg"><img src="assets/steam/ats-3.jpg" alt="Plataforma del aeropuerto" loading="lazy"></button>
+        <button class="shot" data-full="assets/steam/ats-5.jpg"><img src="assets/steam/ats-5.jpg" alt="Aeropuerto" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KOK -->
+<section class="game game--kok" id="kok">
+  <div class="game__bg" style="background-image:url(assets/steam/kok-13.jpg)" aria-hidden="true"></div>
+  <div class="fog" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap game__grid game__grid--rev">
+    <div class="game__copy">
+      <p class="tag tag--kok reveal"><span class="dot"></span><span data-i18n="kok.tag">RPG de acción · Demo disponible</span></p>
+      <h3 class="game__title game__title--kok reveal">The Knight of<br>The Kingdom</h3>
+      <p class="game__lead reveal" data-i18n="kok.lead">Una niebla densa cubrió el pueblo y trajo criaturas que siembran el caos. Explora, combate y descubre de dónde viene. La niebla es solo el comienzo.</p>
+      <ul class="feats reveal">
+        <li><b data-i18n="kok.f1t">Combate tenso</b><span data-i18n="kok.f1">Cámara sobre el hombro y cada golpe cuenta.</span></li>
+        <li><b data-i18n="kok.f2t">Jefes únicos</b><span data-i18n="kok.f2">Peleas con mecánicas propias.</span></li>
+        <li><b data-i18n="kok.f3t">Explora y resuelve</b><span data-i18n="kok.f3">Puzzles, inventario y secretos.</span></li>
+        <li><b data-i18n="kok.f4t">Historia en el entorno</b><span data-i18n="kok.f4">El mundo cuenta lo que pasó.</span></li>
+      </ul>
+      <div class="game__cta reveal">
+        <a class="btn btn--kok" href="https://store.steampowered.com/app/3325870/The_Knight_of_The_Kingdom/" target="_blank" rel="noopener" data-i18n="cta.demo">Jugar la demo gratis</a>
+        <a class="btn btn--ghost" href="https://discord.gg/4TmyqCRAS4" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+    <div class="game__shots reveal">
+      <button class="shot shot--main" data-full="assets/steam/kok-5.jpg"><img src="assets/steam/kok-5.jpg" alt="The Knight of The Kingdom: combate" loading="lazy"></button>
+      <div class="shot__row">
+        <button class="shot" data-full="assets/steam/kok-4.jpg"><img src="assets/steam/kok-4.jpg" alt="Interior del castillo" loading="lazy"></button>
+        <button class="shot" data-full="assets/steam/kok-10.jpg"><img src="assets/steam/kok-10.jpg" alt="Taberna" loading="lazy"></button>
+        <button class="shot" data-full="assets/steam/kok-2.jpg"><img src="assets/steam/kok-2.jpg" alt="Bosque de noche" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE -->
+<section class="mobile" id="movil">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="mob.eyebrow">Juegos móviles · iOS y Android</p>
+    <h2 class="h2 reveal" data-i18n="mob.title">Partidas cortas. Ganas de una más.</h2>
+  </div>
+
+  <div class="wrap">
+    <article class="wall reveal">
+      <img class="wall__art" src="assets/apps/wallsmith-art.jpg" alt="Wallsmith: el Golem" loading="lazy">
+      <div class="wall__shade"></div>
+      <div class="wall__copy">
+        <p class="tag tag--wall"><span class="dot"></span><span data-i18n="wall.tag">Próximamente</span></p>
+        <h3>Wallsmith</h3>
+        <p data-i18n="wall.lead">Estrategia por turnos en pixel art. Llega primero a la meta y frena a tu rival con muros, pero nunca puedes cerrarle todo el camino.</p>
+        <ul class="chips">
+          <li data-i18n="wall.c1">10 niveles de campaña</li>
+          <li data-i18n="wall.c2">5 modos de juego</li>
+          <li data-i18n="wall.c3">Jefe: el Golem</li>
+          <li data-i18n="wall.c4">Hasta 4 jugadores</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__shot card__shot--wide"><img src="assets/apps/duck-1.jpg" alt="Duck Swing en juego" loading="lazy"></div>
+        <div class="card__body">
+          <img class="card__icon" src="assets/apps/duck-icon.jpg" alt="" width="64" height="64" loading="lazy">
+          <div>
+            <h3>Duck Swing</h3>
+            <p class="card__sub" data-i18n="duck.sub">Arcade de un toque</p>
+          </div>
+        </div>
+        <p class="card__text" data-i18n="duck.text">Tu pato se balancea como un péndulo. Toca para soltarte, vuela y aterriza en la plataforma. Encadena aterrizajes perfectos.</p>
+        <div class="stores"><a class="store" href="https://apps.apple.com/us/app/duck-swing-one-tap-reflex/id6797552479" target="_blank" rel="noopener">App Store →</a><a class="store store--gp" href="https://play.google.com/store/apps/details?id=com.getcomponentstudio.swingduck" target="_blank" rel="noopener">Google Play →</a></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__shot card__shot--tall"><img src="assets/apps/word-1.jpg" alt="Word Connect en juego" loading="lazy"></div>
+        <div class="card__body">
+          <img class="card__icon" src="assets/apps/word-icon.jpg" alt="" width="64" height="64" loading="lazy">
+          <div>
+            <h3>Word Connect</h3>
+            <p class="card__sub" data-i18n="word.sub">Puzzle de palabras · 11 idiomas</p>
+          </div>
+        </div>
+        <p class="card__text" data-i18n="word.text">16 palabras, 4 grupos ocultos. Encuentra qué las une antes de quedarte sin intentos. Niveles nuevos cada día.</p>
+        <div class="stores"><a class="store" href="https://apps.apple.com/us/app/word-connect-guess-categories/id6759536019" target="_blank" rel="noopener">App Store →</a><a class="store store--gp" href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Word_Combiner" target="_blank" rel="noopener">Google Play →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- APPS -->
+<section class="apps wrap" id="apps">
+  <p class="eyebrow reveal" data-i18n="apps.eyebrow">Más allá de los juegos</p>
+  <h2 class="h2 reveal" data-i18n="apps.title">También hacemos apps útiles.</h2>
+  <div class="apps__grid">
+    <article class="app reveal">
+      <div class="app__copy">
+        <img class="card__icon" src="assets/apps/kero-icon.jpg" alt="" width="64" height="64" loading="lazy">
+        <h3>Kero</h3>
+        <p class="card__sub" data-i18n="kero.sub">Control de ingresos y gastos</p>
+        <p class="card__text" data-i18n="kero.text">Registra tu dinero sin fricción y mira a dónde se va cada mes. Finanzas personales simples.</p>
+        <div class="stores"><a class="store" href="https://apps.apple.com/us/app/kero-income-expense-tracker/id6756548957" target="_blank" rel="noopener">App Store →</a><a class="store store--gp" href="https://play.google.com/store/apps/details?id=com.williamedu.financeflow" target="_blank" rel="noopener">Google Play →</a></div>
+      </div>
+      <img class="app__phone" src="assets/apps/kero-1.jpg" alt="Kero" loading="lazy">
+    </article>
+    <article class="app reveal">
+      <div class="app__copy">
+        <img class="card__icon" src="assets/apps/edetodos-icon.jpg" alt="" width="64" height="64" loading="lazy">
+        <h3>EDETODOS</h3>
+        <p class="card__sub" data-i18n="ede.sub">Cortes de luz en República Dominicana</p>
+        <p class="card__text" data-i18n="ede.text">Los apagones programados de Edeeste, Edesur y Edenorte en una sola app, con alertas antes de cada corte.</p>
+        <div class="stores"><a class="store" href="https://apps.apple.com/us/app/edetodos-power-outages-dr/id6818687182" target="_blank" rel="noopener">App Store →</a><a class="store store--gp" href="https://play.google.com/store/apps/details?id=com.williamedu.edetodos" target="_blank" rel="noopener">Google Play →</a></div>
+      </div>
+      <img class="app__phone" src="assets/apps/edetodos-1.jpg" alt="EDETODOS" loading="lazy">
+    </article>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section class="studio" id="estudio">
+  <div class="wrap studio__grid">
+    <div class="studio__mark reveal"><img src="assets/brand/logo.webp" alt="GetComponent Studio" loading="lazy"></div>
+    <div>
+      <p class="eyebrow reveal" data-i18n="studio.eyebrow">El estudio</p>
+      <h2 class="h2 reveal" data-i18n="studio.title">Un equipo pequeño con juegos grandes en la cabeza.</h2>
+      <p class="studio__text reveal" data-i18n="studio.p1">GetComponent Studio es un estudio independiente fundado por William Hiciano. Nacimos haciendo simuladores de situaciones reales y hoy construimos de todo: desde una torre de control hasta un reino de fantasía oscura.</p>
+      <p class="studio__text reveal" data-i18n="studio.p2">Nos gustan los juegos que se entienden en segundos y se dominan en semanas. Diseñamos, programamos y publicamos cada título nosotros mismos.</p>
+      <ul class="pillars reveal">
+        <li><b data-i18n="studio.v1t">Realismo</b><span data-i18n="studio.v1">Simuladores basados en procedimientos reales.</span></li>
+        <li><b data-i18n="studio.v2t">Mundos propios</b><span data-i18n="studio.v2">Historias y universos originales.</span></li>
+        <li><b data-i18n="studio.v3t">Para todos</b><span data-i18n="studio.v3">Juegos traducidos hasta a 11 idiomas.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <img class="contact__frog reveal" src="assets/brand/frog.png" alt="" width="120" height="103" loading="lazy">
+    <h2 class="h2 h2--xl reveal" data-i18n="contact.title">¿Hablamos?</h2>
+    <p class="contact__lead reveal" data-i18n="contact.lead">Prensa, colaboraciones, publicación o solo saludar.</p>
+    <a class="contact__mail reveal" href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>
+    <div class="contact__links reveal">
+      <a href="https://store.steampowered.com/search/?developer=GetComponent%20Studio" target="_blank" rel="noopener">Steam</a>
+      <a href="https://apps.apple.com/us/developer/william-hiciano/id1861319676" target="_blank" rel="noopener">App Store</a>
+      <a href="https://play.google.com/store/apps/developer?id=william+eduardo+hiciano+morales" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://discord.gg/4TmyqCRAS4" target="_blank" rel="noopener">Discord</a>
+      <a href="https://getcomponent-studio.itch.io" target="_blank" rel="noopener">itch.io</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer wrap">
+  <span>© <span id="year">2026</span> GetComponent Studio</span>
+  <span data-i18n="footer.rights">Todas las marcas pertenecen a sus dueños.</span>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" aria-label="Cerrar">×</button>
+  <img alt="">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
