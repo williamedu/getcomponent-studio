@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wallsmith — Estrategia por turnos en pixel art</title>
-<meta name="description" content="Wallsmith: estrategia por turnos en pixel art. Llega primero a la meta y frena a tu rival con muros. 10 niveles, 5 modos, el Golem y hasta 4 jugadores. iOS y Android.">
+<meta name="description" content="Wallsmith: estrategia por turnos en pixel art. Llega primero a la meta y frena a tu rival con muros. 45 niveles, 3 jefes, modo online y hasta 4 jugadores. iOS y Android.">
 <meta name="theme-color" content="#0c0603">
 <meta property="og:title" content="Wallsmith — GetComponent Studio">
 <meta property="og:description" content="Mueve, bloquea, gana. Estrategia por turnos en pixel art para iOS y Android.">
@@ -13,8 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css?v=4">
-<link rel="stylesheet" href="wallsmith.css?v=3">
+<link rel="stylesheet" href="../css/style.css?v=5">
+<link rel="stylesheet" href="wallsmith.css?v=5">
 </head>
 <body class="ws">
 
@@ -43,14 +43,14 @@
       <h1>Wallsmith</h1>
       <p class="wsh__lead" data-i18n="lead">Estrategia por turnos en pixel art. Llega primero a la meta, pero tu rival puede cerrarte el paso con muros. Piensa dos pasos adelante.</p>
       <ul class="chips">
-        <li data-i18n="c1">10 niveles de campaña</li>
-        <li data-i18n="c2">5 modos de juego</li>
-        <li data-i18n="c3">Jefe: el Golem</li>
-        <li data-i18n="c4">Hasta 4 jugadores</li>
+        <li data-i18n="c1">45 niveles</li>
+        <li data-i18n="c2">Varios modos de juego</li>
+        <li data-i18n="c3">3 jefes</li>
+        <li data-i18n="c4">Online y hasta 4 jugadores</li>
       </ul>
       <div class="wsh__cta">
-        <a class="btn-ios" href="https://apps.apple.com/do/app/wallsmith-juego-quoridor/id6826942004" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.900-.8-3.100-.8-1.600 0-3.100.9-3.900 2.400-1.700 2.900-.4 7.200 1.200 9.500.8 1.200 1.700 2.400 3 2.400 1.200 0 1.700-.8 3.100-.8s1.900.8 3.100.8c1.300 0 2.100-1.100 2.900-2.300.9-1.300 1.300-2.600 1.300-2.700-.1 0-2.700-1-2.700-4.100zM14.100 5.800c.7-.8 1.100-1.900 1-3-1 0-2.100.7-2.800 1.500-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.6 2.800-1.400z"/></svg><span data-i18n="ios">Descárgalo en App Store</span></a>
-        <span class="btn-soon" data-i18n="gp">Android · próximamente</span>
+        <a class="badge badge--ios" href="https://apps.apple.com/do/app/wallsmith-juego-quoridor/id6826942004" target="_blank" rel="noopener" aria-label="Descargar Wallsmith en App Store"><img class="b-es" src="../assets/badges/appstore-es.svg" alt="Descárgalo en el App Store" height="44"><img class="b-en" src="../assets/badges/appstore-en.svg" alt="Download on the App Store" height="44"></a>
+          <span class="badge badge--gp" aria-label="Google Play: próximamente"><img class="b-es" src="../assets/badges/googleplay-es.png" alt="Disponible en Google Play" height="62"><img class="b-en" src="../assets/badges/googleplay-en.png" alt="Get it on Google Play" height="62"><em data-i18n="gp.soon">Próximamente</em></span>
       </div>
       <p class="wsh__soon" data-i18n="soon">Gratis con anuncios. Compras opcionales dentro del juego.</p>
     </div>
@@ -79,13 +79,14 @@
 <section class="wsec wsec--alt" id="modos">
   <div class="wrap">
     <p class="eyebrow" data-i18n="modes.eyebrow">Campaña con varios formatos</p>
-    <h2 class="h2" data-i18n="modes.title">Cinco maneras de ganar.</h2>
+    <h2 class="h2" data-i18n="modes.title">Muchas maneras de ganar.</h2>
     <div class="modes">
       <article><h3 data-i18n="m1t">Clásico</h3><p data-i18n="m1">Corre a la fila contraria.</p></article>
       <article><h3 data-i18n="m2t">Bandera</h3><p data-i18n="m2">El primero en pisar la bandera del centro gana.</p></article>
       <article><h3 data-i18n="m3t">Carrera</h3><p data-i18n="m3">Salen del mismo lado y el segundo en mover recibe muros extra.</p></article>
       <article><h3 data-i18n="m4t">Cuatro jugadores</h3><p data-i18n="m4">Cuatro peones, un solo ganador.</p></article>
       <article><h3 data-i18n="m5t">Cuatro vientos</h3><p data-i18n="m5">Cada uno sale de un lado hacia la bandera.</p></article>
+      <article><h3 data-i18n="m6t">Online</h3><p data-i18n="m6">Juega por internet contra otros jugadores.</p></article>
     </div>
   </div>
 </section>
@@ -95,8 +96,8 @@
   <div class="wrap golem__in">
     <img src="../assets/apps/wallsmith-art.jpg" alt="El Golem de Wallsmith" loading="lazy">
     <div>
-      <p class="eyebrow" data-i18n="golem.eyebrow">Jefe final</p>
-      <h2 class="h2" data-i18n="golem.title">Enfréntate al Golem.</h2>
+      <p class="eyebrow" data-i18n="golem.eyebrow">3 jefes</p>
+      <h2 class="h2" data-i18n="golem.title">Enfréntate al Golem y a más jefes.</h2>
       <p data-i18n="golem.p">Cruza un tablero largo con dos ríos: solo se pasa por los puentes. Cada pocas rondas el Golem lanza bloques sobre el tablero. Esquívalos y llega antes que él.</p>
     </div>
   </div>
@@ -111,7 +112,8 @@
       <li data-i18n="f1">Arte pixel art y efectos de sonido cuidados</li>
       <li data-i18n="f2">Rivales con IA que siempre buscan ganar</li>
       <li data-i18n="f3">Poderes especiales: paso doble y muro doble</li>
-      <li data-i18n="f4">Monedas y estrellas en cada nivel</li>
+      <li data-i18n="f4">45 niveles con monedas y estrellas</li>
+      <li data-i18n="f9">Modo online contra otros jugadores</li>
       <li data-i18n="f5">Skins de muros que se desbloquean con monedas</li>
       <li data-i18n="f6">Progreso en la nube con tu cuenta de Google o Apple (opcional)</li>
       <li data-i18n="f7">Gratis con anuncios; quítalos con el Pack Inicial</li>
@@ -126,8 +128,8 @@
     <h2 class="h2" data-i18n="cta.title">Juégalo hoy en tu iPhone.</h2>
     <p data-i18n="cta.p">¿Preguntas o ideas para Wallsmith? Escríbenos.</p>
     <p class="cta__links">
-      <a class="btn-ios" href="https://apps.apple.com/do/app/wallsmith-juego-quoridor/id6826942004" target="_blank" rel="noopener"><span data-i18n="ios">Descárgalo en App Store</span></a>
-      <a class="store store--wall" href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>
+      <a class="badge badge--ios" href="https://apps.apple.com/do/app/wallsmith-juego-quoridor/id6826942004" target="_blank" rel="noopener" aria-label="Descargar Wallsmith en App Store"><img class="b-es" src="../assets/badges/appstore-es.svg" alt="Descárgalo en el App Store" height="44"><img class="b-en" src="../assets/badges/appstore-en.svg" alt="Download on the App Store" height="44"></a>
+          <span class="badge badge--gp" aria-label="Google Play: próximamente"><img class="b-es" src="../assets/badges/googleplay-es.png" alt="Disponible en Google Play" height="62"><img class="b-en" src="../assets/badges/googleplay-en.png" alt="Get it on Google Play" height="62"><em data-i18n="gp.soon">Próximamente</em></span>
       <a class="store" href="https://williamedu.github.io/wallrush-legal/soporte.html" target="_blank" rel="noopener" data-i18n="support">Soporte →</a>
       <a class="store" href="../" data-i18n="cta.studio">Más juegos del estudio →</a>
     </p>
@@ -153,23 +155,23 @@
     'nav.back': '← All games', 'nav.modes': 'Modes', 'nav.golem': 'The Golem', 'nav.feat': 'Features',
     'tag': 'Available on the App Store · Android coming soon', 'ios': 'Download on the App Store', 'gp': 'Android · coming soon',
     'lead': 'Turn-based strategy in pixel art. Reach the goal first, but your rival can block your way with walls. Think two steps ahead.',
-    'c1': '10 campaign levels', 'c2': '5 game modes', 'c3': 'Boss: the Golem', 'c4': 'Up to 4 players',
+    'c1': '45 levels', 'c2': 'Many game modes', 'c3': '3 bosses', 'c4': 'Online and up to 4 players', 'gp.soon': 'Coming soon',
     'soon': 'Free with ads. Optional in-game purchases.', 'live': 'REAL GAMEPLAY',
     'how.eyebrow': 'How to play', 'how.title': 'Move. Block. Win.',
     's1t': 'Move', 's1': 'Advance your pawn to the opposite row. First to arrive wins.',
     's2t': 'Block', 's2': "Drag walls onto the board to slow your rival, but you can never close off their whole path.",
     's3t': 'Earn stars', 's3': 'Win in fewer turns for 3 stars, and collect coins for wall skins.',
-    'modes.eyebrow': 'Campaign with many formats', 'modes.title': 'Five ways to win.',
+    'modes.eyebrow': 'Campaign with many formats', 'modes.title': 'Many ways to win.',
     'm1t': 'Classic', 'm1': 'Race to the opposite row.',
     'm2t': 'Flag', 'm2': 'First to step on the center flag wins.',
     'm3t': 'Race', 'm3': 'Both start on the same side and the second to move gets extra walls.',
     'm4t': 'Four players', 'm4': 'Four pawns, one winner.',
-    'm5t': 'Four winds', 'm5': 'Each one starts from a side toward the flag.',
-    'golem.eyebrow': 'Final boss', 'golem.title': 'Face the Golem.',
+    'm6t': 'Online', 'm6': 'Play over the internet against other players.', 'm5t': 'Four winds', 'm5': 'Each one starts from a side toward the flag.',
+    'golem.eyebrow': '3 bosses', 'golem.title': 'Face the Golem and more bosses.',
     'golem.p': 'Cross a long board with two rivers: you can only pass over the bridges. Every few rounds the Golem throws blocks onto the board. Dodge them and arrive before it does.',
     'feat.eyebrow': 'Features', 'feat.title': 'Made with love, pixel by pixel.',
     'f1': 'Carefully crafted pixel art and sound effects', 'f2': 'AI rivals that always play to win',
-    'f3': 'Special powers: double step and double wall', 'f4': 'Coins and stars on every level',
+    'f3': 'Special powers: double step and double wall', 'f4': '45 levels with coins and stars', 'f9': 'Online mode against other players',
     'f5': 'Wall skins unlocked with coins', 'f6': 'Cloud progress with your Google or Apple account (optional)',
     'f7': 'Free with ads; remove them with the Starter Pack', 'f8': 'Available in 11 languages',
     'cta.title': 'Play it today on your iPhone.', 'cta.p': 'Questions or ideas for Wallsmith? Write to us.',

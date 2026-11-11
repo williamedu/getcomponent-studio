@@ -371,3 +371,20 @@ ul { list-style: none; }
   .wall { margin-top: 56px; }
   .wall__phone { margin: -44px 0 8px; }
 }
+
+/* Official store badges + decluttered poster */
+.wall__copy { max-width: 480px; }
+.wall__copy .wall__lead, .wall__copy > p[data-i18n="wall.lead"] { margin-bottom: 14px; }
+.wall__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; font: 600 12px/1.4 "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; color: #ffd08a !important; margin-bottom: 20px !important; }
+.wall__meta i { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); }
+.badge { display: inline-flex; align-items: center; position: relative; line-height: 0; }
+.badge img { display: block; width: auto; max-width: none; }
+.badge--ios img { height: 44px; }
+.badge--ios { transition: transform .25s var(--ease), filter .25s; }
+.badge--ios:hover { transform: translateY(-3px); filter: drop-shadow(0 8px 18px rgba(255, 154, 61, .4)); }
+.badge--gp { cursor: default; margin-left: -10px; }
+.badge--gp img { height: 62px; opacity: .45; filter: grayscale(.6); }
+.badge--gp em { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-4deg); white-space: nowrap; padding: 4px 10px; border-radius: 6px; background: var(--amber); color: #1a0e06; font: 800 10px/1 "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
+html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
+.wall__cta { gap: 0 6px; margin-bottom: 14px; }
+@media (max-width: 760px) { .badge--gp { margin-left: -6px; } .badge--gp img { height: 56px; } .badge--ios img { height: 40px; } }

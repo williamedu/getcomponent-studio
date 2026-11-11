@@ -84,3 +84,11 @@
 .wsh__cta .btn-soon { padding: 13px 18px; }
 .wsh__soon { margin-top: 16px; }
 .cta__links .btn-ios { align-self: auto; }
+
+.wsh__cta { gap: 0 6px; margin-top: 24px; }
+.wsh__cta .badge--ios img { height: 52px; }
+.wsh__cta .badge--gp img { height: 74px; }
+.cta__links { align-items: center; }
+.cta__links .badge--gp { margin-left: 0; }
+.modes { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.cta .h2 { margin-inline: auto; }
