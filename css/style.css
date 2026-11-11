@@ -396,3 +396,11 @@ html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
 .badge--gp-on img { height: 58px; opacity: 1; filter: none; }
 .badge--gp-on:hover { transform: translateY(-3px); transition: transform .25s var(--ease); }
 .app--wide .stores--badges { gap: 0 4px; }
+
+/* badge spacing */
+.stores--badges { gap: 8px 14px; }
+.badge--gp-on, .badge--gp { margin-left: 0; }
+.wall__cta { gap: 8px 14px; }
+.wsh__cta { gap: 8px 14px; }
+.cta__links .badge--gp { margin-left: 0; }
+@media (max-width: 760px) { .badge--gp { margin-left: 0; } }
