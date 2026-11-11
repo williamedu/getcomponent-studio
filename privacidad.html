@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Pixel Agent Department</title>
+<meta name="description" content="What data Pixel Agent Department accesses from Instagram, TikTok and YouTube, where it is stored, and how to delete it.">
+<link rel="icon" href="img/icono_64.png" type="image/png">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltura">
+    <a class="marca" href="/"><img src="img/icono_256.png" alt="" width="40" height="40"><span class="nombres"><span class="estudio">GetComponent Studio</span><span class="producto">Pixel Agent Department</span></span></a>
+    <nav class="menu" aria-label="Main">
+      <a href="/">Home · Inicio</a>
+      <a href="terminos.html">Terms · Términos</a>
+      <a href="privacidad.html" aria-current="page">Privacy · Privacidad</a>
+      <a href="borrar-datos.html">Data deletion · Borrar datos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="envoltura">
+  <div class="idiomas"><a href="#en">English</a><a href="#es">Español</a></div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <article class="documento" id="en" lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="fecha">Last updated: November 11, 2026</p>
+
+    <p>This policy explains what data <strong>Pixel Agent Department</strong> (the "App": the Windows game, its local engine and our server) accesses, why, where it is stored and how you can delete it. The App is made by GetComponent Studio ("we"). Contact: <a href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>.</p>
+
+    <h2>1. Summary</h2>
+    <ul>
+      <li>Your <strong>videos go directly from your PC</strong> to Instagram, TikTok or YouTube. They never pass through our server.</li>
+      <li>Your <strong>access tokens are stored encrypted on your PC</strong> (Windows DPAPI). Our server only relays them once during sign-in and deletes them.</li>
+      <li>Our server keeps an <strong>anonymous installation ID</strong>, your plan, AI usage counters and the name/ID of the accounts you connected.</li>
+      <li>We do <strong>not sell</strong> data, show ads, use tracking cookies or analytics, or share data between users.</li>
+      <li>Nothing is published or replied to without your approval in the App.</li>
+    </ul>
+
+    <h2>2. Data we access from each network</h2>
+    <p>We only access a network after you sign in on its official page and grant permission. We use only the official APIs and only for the features listed here.</p>
+    <table>
+      <tr><th>Network</th><th>Permission</th><th>What we access</th><th>What it is used for</th></tr>
+      <tr><td rowspan="2">YouTube (YouTube API Services)</td><td><code>youtube.readonly</code></td><td>Your channel name and ID, subscriber count, your uploaded videos and their views, likes and comments counts</td><td>Show the connected channel and the stats of your videos in the YouTube office</td></tr>
+      <tr><td><code>youtube.upload</code></td><td>Uploading videos you approved, with title, description, visibility and date</td><td>Publish your Shorts</td></tr>
+      <tr><td rowspan="4">Instagram (professional account)</td><td><code>instagram_basic</code></td><td>Username, profile picture, followers, your media with likes and comments counts</td><td>Show the account and the stats of your Reels in the Instagram office</td></tr>
+      <tr><td><code>instagram_content_publish</code></td><td>Publishing Reels you approved</td><td>Publish your Reels</td></tr>
+      <tr><td><code>instagram_manage_comments</code></td><td>Comments on your media (text, username, time); posting replies</td><td>Show new comments and post the replies you approve</td></tr>
+      <tr><td><code>instagram_manage_messages</code></td><td>Sending one private reply to a person who commented</td><td>Send the private replies you approve</td></tr>
+      <tr><td rowspan="4">TikTok</td><td><code>user.info.basic</code>, <code>user.info.profile</code></td><td>Open ID, display name, username, avatar, profile link</td><td>Show which account is connected</td></tr>
+      <tr><td><code>user.info.stats</code></td><td>Followers, likes and video counts</td><td>Show account stats in the TikTok office</td></tr>
+      <tr><td><code>video.list</code></td><td>Your public videos with views, likes, comments and shares counts</td><td>Show the stats of what you published</td></tr>
+      <tr><td><code>video.upload</code>, <code>video.publish</code></td><td>Uploading and posting videos you approved, with caption and privacy settings</td><td>Publish your TikTok videos</td></tr>
+    </table>
+
+    <h2>3. Where data is stored</h2>
+    <h3>On your PC</h3>
+    <p>Access and refresh tokens, connected account info, your job queue (titles, captions, dates, links and status of your posts) and the stats shown in the offices are stored in <code>%LOCALAPPDATA%\PixelAgentDepartment</code>. Tokens are encrypted with Windows DPAPI, so only your Windows user on that PC can read them. Your video files stay where you keep them.</p>
+    <h3>The background program (night shift)</h3>
+    <p>The App includes a small program, the <strong>engine</strong>, that does the real work on your PC (cutting videos, publishing and replying to comments). It has no window. In Windows Task Manager it appears as <strong>«Pixel Agent - Turno nocturno»</strong>. It starts when you open the game and keeps running after you close it, so scheduled posts go out on time; it stops when you shut down or restart your PC.</p>
+    <p>If you turn on the <strong>night shift</strong> (talk to the floor manager in the game), the engine also starts by itself when you sign in to Windows, so it can publish what you scheduled and reply to comments even if you do not open the game. To do this, the App adds one entry for your Windows user only (<code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code>, value <code>PixelAgentDepartmentTurnoNocturno</code>); it needs no administrator rights. Turning the night shift off removes that entry. You can also end the program at any time from Task Manager. The night shift sends nothing new to our server: it only does what you already scheduled or set up in the App.</p>
+    <h3>On our server (Google Firebase, United States)</h3>
+    <ul>
+      <li><strong>Installation record:</strong> an anonymous ID (no name, email or password), the engine version, the Windows version, first and last start and number of starts, your plan and subscription end date.</li>
+      <li><strong>License:</strong> to tie the full version to one PC, the App sends a PC identifier: a one-way summary (hash) of the Windows machine ID, not the ID itself. Our server signs your license with it and does not use it for anything else.</li>
+      <li><strong>Purchases (full version, paid with PayPal):</strong> the PayPal order number, the payer ID that PayPal gives us, the payment (capture) number, the product, price, currency, date and status of the payment, the license key and the installation it belongs to. <strong>We never see your card or bank details</strong>: you pay on PayPal's site and PayPal only tells us whether the payment went through. We use these records to deliver and recover your license, check that a payment is real, and handle claims and accounting.</li>
+      <li><strong>Connected accounts:</strong> for Instagram, the IDs and usernames of the accounts you shared; for TikTok, your open ID and username; and the connection date. <strong>Never tokens.</strong></li>
+      <li><strong>AI usage:</strong> monthly counters (number of requests, tokens and cost), to apply your plan's limits.</li>
+      <li><strong>Sign-in relay:</strong> when you sign in to Instagram or TikTok, our server exchanges the authorization code (this needs the App secret, which only lives on the server) and keeps the result until your App collects it. It is deleted when collected; if it is not collected, it can no longer be used after 15 minutes and is deleted automatically within 24 hours.</li>
+      <li><strong>TikTok token renewal:</strong> your App sends the refresh token to our server, which renews it with TikTok and returns the new tokens without storing them.</li>
+      <li><strong>Technical logs</strong> (Google Cloud Logging): request time, anonymous ID, errors. They do not contain tokens or your texts. Google keeps them for 30 days.</li>
+    </ul>
+
+    <h2>4. AI-written captions</h2>
+    <p>If your plan includes AI captions, the information you type about a clip (title, topic, tone, language and target networks) is sent through our server to <strong>Anthropic</strong> (Claude API) to write the captions. <strong>The video is not sent.</strong> We do not store the texts on our server. Anthropic processes them under its commercial terms. You always review and can edit the captions before anything is published.</p>
+
+    <h2>5. Service providers</h2>
+    <ul>
+      <li><strong>Google Firebase / Google Cloud</strong> (server, database, logs): <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+      <li><strong>Anthropic</strong> (AI captions): <a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a>.</li>
+      <li><strong>PayPal</strong> (payments for the full version): <a href="https://www.paypal.com/myaccount/privacy/privacyhub">PayPal Privacy Statement</a>. PayPal processes the payment and your payment details under its own policy.</li>
+      <li><strong>Meta / Instagram</strong>, <strong>TikTok</strong> and <strong>Google / YouTube</strong> receive what you publish through their APIs, under their own policies.</li>
+    </ul>
+
+    <h2>6. YouTube and Google user data</h2>
+    <p>The App uses <strong>YouTube API Services</strong>. By connecting YouTube you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google's processing is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. You can revoke the App's access at any time from your <a href="https://myaccount.google.com/permissions">Google Account permissions page</a>.</p>
+    <p>Pixel Agent Department's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. We do not use YouTube data for advertising, do not sell it, do not let humans read it (except with your consent for support, for security, or to comply with the law), and do not use it to train AI models.</p>
+
+    <h2>7. How long we keep data</h2>
+    <ul>
+      <li>On your PC: until you disconnect the account (the token is deleted) or delete the App's folder.</li>
+      <li>Stats shown in the offices are fetched again from each network when you open them.</li>
+      <li>On our server: the installation record and usage counters while you use the App; we delete them on request (see <a href="borrar-datos.html">Data deletion</a>).</li>
+      <li>Purchase records: while your license exists and for as long as tax and accounting rules require us to keep proof of the sale. If you ask us to delete your data, we unlink them from your installation but keep the payment record itself for that time. PayPal keeps its own records under its policy.</li>
+    </ul>
+
+    <h2>8. Your choices and rights</h2>
+    <p>You can disconnect any network in the App (<em>Accounts → Disconnect</em>) and revoke access on the network itself:</p>
+    <ul>
+      <li>Google / YouTube: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a></li>
+      <li>Instagram: Instagram app → Settings → <em>Website permissions</em> → <em>Apps and websites</em> → remove "Pixel Agent Department"</li>
+      <li>TikTok: TikTok app → Settings and privacy → <em>Security &amp; permissions</em> → <em>Apps and services</em> → remove "Pixel Agent Department"</li>
+    </ul>
+    <p>You can ask us to access, correct or delete the data on our server by writing to <a href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>. Instructions: <a href="borrar-datos.html">Data deletion</a>.</p>
+
+    <h2>9. Security</h2>
+    <p>Connections use HTTPS. Tokens are encrypted on your PC. Our database and storage are closed to the public (only our server functions can access them), and app secrets are kept in Google Secret Manager.</p>
+
+    <h2>10. Children</h2>
+    <p>The App is not directed to children under 13, and Instagram, TikTok and YouTube have their own minimum ages. Do not connect accounts that you are not allowed to manage.</p>
+
+    <h2>11. Changes</h2>
+    <p>If this policy changes, we will update this page and its date. Important changes will also be announced in the App.</p>
+
+    <h2>12. Contact</h2>
+    <p>GetComponent Studio, the Dominican Republic. Email: <a href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>.</p>
+  </article>
+
+  <!-- ===================== ESPAÑOL ===================== -->
+  <article class="documento" id="es" lang="es">
+    <h1>Política de privacidad</h1>
+    <p class="fecha">Última actualización: 11 de noviembre de 2026</p>
+
+    <p>Esta política explica qué datos usa <strong>Pixel Agent Department</strong> (la «App»: el juego para Windows, su motor local y nuestro servidor), para qué, dónde se guardan y cómo puedes borrarlos. La App la hace GetComponent Studio («nosotros»). Contacto: <a href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>.</p>
+
+    <h2>1. Resumen</h2>
+    <ul>
+      <li>Tus <strong>videos van directos de tu PC</strong> a Instagram, TikTok o YouTube. Nunca pasan por nuestro servidor.</li>
+      <li>Los <strong>accesos a tus cuentas (tokens) se guardan cifrados en tu PC</strong> (DPAPI de Windows). Nuestro servidor solo los pasa una vez al conectar la cuenta y los borra.</li>
+      <li>Nuestro servidor guarda un <strong>identificador anónimo</strong> de la instalación, tu plan, el uso de la IA y el nombre y el ID de las cuentas que conectaste.</li>
+      <li><strong>No vendemos</strong> datos, no ponemos anuncios, no usamos cookies de seguimiento ni analítica, y no compartimos datos entre usuarios.</li>
+      <li>No se publica ni se responde nada sin tu aprobación en la App.</li>
+    </ul>
+
+    <h2>2. Datos que usamos de cada red</h2>
+    <p>Solo entramos en una red después de que inicies sesión en su página oficial y des permiso. Usamos solo las API oficiales y solo para lo que se explica aquí.</p>
+    <table>
+      <tr><th>Red</th><th>Permiso</th><th>Qué datos</th><th>Para qué</th></tr>
+      <tr><td rowspan="2">YouTube (servicios de la API de YouTube)</td><td><code>youtube.readonly</code></td><td>Nombre e ID del canal, suscriptores, tus videos y sus vistas, likes y comentarios</td><td>Mostrar el canal conectado y los números de tus videos en la oficina de YouTube</td></tr>
+      <tr><td><code>youtube.upload</code></td><td>Subir los videos que apruebas, con título, descripción, visibilidad y fecha</td><td>Publicar tus Shorts</td></tr>
+      <tr><td rowspan="4">Instagram (cuenta profesional)</td><td><code>instagram_basic</code></td><td>Usuario, foto de perfil, seguidores, tus publicaciones con likes y comentarios</td><td>Mostrar la cuenta y los números de tus Reels en la oficina de Instagram</td></tr>
+      <tr><td><code>instagram_content_publish</code></td><td>Publicar los Reels que apruebas</td><td>Publicar tus Reels</td></tr>
+      <tr><td><code>instagram_manage_comments</code></td><td>Comentarios de tus publicaciones (texto, usuario y hora); publicar respuestas</td><td>Mostrar los comentarios nuevos y publicar las respuestas que apruebas</td></tr>
+      <tr><td><code>instagram_manage_messages</code></td><td>Enviar una respuesta privada a quien comentó</td><td>Enviar las respuestas privadas que apruebas</td></tr>
+      <tr><td rowspan="4">TikTok</td><td><code>user.info.basic</code>, <code>user.info.profile</code></td><td>Open ID, nombre, usuario, avatar y enlace al perfil</td><td>Mostrar qué cuenta está conectada</td></tr>
+      <tr><td><code>user.info.stats</code></td><td>Seguidores, likes y número de videos</td><td>Mostrar los números de la cuenta en la oficina de TikTok</td></tr>
+      <tr><td><code>video.list</code></td><td>Tus videos públicos con vistas, likes, comentarios y compartidos</td><td>Mostrar los números de lo que publicaste</td></tr>
+      <tr><td><code>video.upload</code>, <code>video.publish</code></td><td>Subir y publicar los videos que apruebas, con su texto y su privacidad</td><td>Publicar tus videos de TikTok</td></tr>
+    </table>
+
+    <h2>3. Dónde se guardan</h2>
+    <h3>En tu PC</h3>
+    <p>Los tokens de acceso y de renovación, los datos de las cuentas conectadas, tu cola de trabajos (títulos, textos, fechas, enlaces y estado de tus publicaciones) y los números que se ven en las oficinas se guardan en <code>%LOCALAPPDATA%\PixelAgentDepartment</code>. Los tokens se cifran con DPAPI de Windows: solo tu usuario de Windows en esa PC puede leerlos. Tus archivos de video se quedan donde los tengas.</p>
+    <h3>El programa de fondo (turno nocturno)</h3>
+    <p>La App incluye un programa pequeño, el <strong>Motor</strong>, que hace el trabajo de verdad en tu PC (cortar videos, publicar y responder comentarios). No tiene ventana. En el Administrador de tareas de Windows aparece como <strong>«Pixel Agent - Turno nocturno»</strong>. Arranca al abrir el juego y sigue funcionando cuando lo cierras, para que lo programado salga a su hora; se detiene al apagar o reiniciar la PC.</p>
+    <p>Si activas el <strong>turno nocturno</strong> (hablando con el jefe de piso en el juego), el Motor además arranca solo al iniciar sesión en Windows, para publicar lo que programaste y responder comentarios aunque no abras el juego. Para eso la App añade una entrada solo para tu usuario de Windows (<code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code>, valor <code>PixelAgentDepartmentTurnoNocturno</code>); no necesita permisos de administrador. Al quitar el turno nocturno, esa entrada se borra. También puedes cerrar el programa cuando quieras desde el Administrador de tareas. El turno nocturno no envía nada nuevo a nuestro servidor: solo hace lo que ya programaste o configuraste en la App.</p>
+    <h3>En nuestro servidor (Google Firebase, Estados Unidos)</h3>
+    <ul>
+      <li><strong>Ficha de la instalación:</strong> un identificador anónimo (sin nombre, correo ni contraseña), la versión del motor, la versión de Windows, el primer y el último arranque y el número de arranques, tu plan y la fecha de fin de la suscripción.</li>
+      <li><strong>Licencia:</strong> para que la versión completa valga en una sola PC, la App manda un identificador de la PC: un resumen de un solo sentido (hash) del identificador de Windows, no el identificador en sí. Nuestro servidor firma con él tu licencia y no lo usa para nada más.</li>
+      <li><strong>Compras (versión completa, pagada con PayPal):</strong> el número del pedido de PayPal, el identificador de comprador que nos da PayPal, el número del cobro, el producto, el precio, la moneda, la fecha y el estado del pago, la clave de licencia y la instalación a la que pertenece. <strong>Nunca vemos los datos de tu tarjeta ni de tu banco</strong>: pagas en la página de PayPal y PayPal solo nos dice si el pago se completó. Usamos estos datos para entregarte y recuperar tu licencia, comprobar que el pago es real y atender reclamaciones y la contabilidad.</li>
+      <li><strong>Cuentas conectadas:</strong> en Instagram, los ID y nombres de usuario de las cuentas que compartiste; en TikTok, tu open ID y tu nombre de usuario; y la fecha de conexión. <strong>Nunca los tokens.</strong></li>
+      <li><strong>Uso de la IA:</strong> contadores por mes (encargos, tokens y coste), para aplicar los límites de tu plan.</li>
+      <li><strong>Paso del inicio de sesión:</strong> al conectar Instagram o TikTok, nuestro servidor canjea el código de autorización (hace falta el secreto de la App, que solo está en el servidor) y guarda el resultado hasta que tu App lo recoge. Se borra al recogerlo; si nadie lo recoge, deja de servir a los 15 minutos y se borra solo en menos de 24 horas.</li>
+      <li><strong>Renovación del token de TikTok:</strong> tu App manda el token de renovación a nuestro servidor, que lo renueva con TikTok y devuelve los tokens nuevos sin guardarlos.</li>
+      <li><strong>Registros técnicos</strong> (Google Cloud Logging): hora de cada petición, identificador anónimo y errores. No contienen tokens ni tus textos. Google los guarda 30 días.</li>
+    </ul>
+
+    <h2>4. Textos escritos con IA</h2>
+    <p>Si tu plan incluye los textos con IA, lo que escribes sobre un clip (título, tema, tono, idioma y redes) se envía, a través de nuestro servidor, a <strong>Anthropic</strong> (API de Claude) para redactar los textos. <strong>El video no se envía.</strong> No guardamos los textos en nuestro servidor. Anthropic los trata según sus condiciones comerciales. Siempre revisas y puedes cambiar los textos antes de publicar.</p>
+
+    <h2>5. Proveedores</h2>
+    <ul>
+      <li><strong>Google Firebase / Google Cloud</strong> (servidor, base de datos y registros): <a href="https://policies.google.com/privacy?hl=es">Política de privacidad de Google</a>.</li>
+      <li><strong>Anthropic</strong> (textos con IA): <a href="https://www.anthropic.com/legal/privacy">Política de privacidad de Anthropic</a>.</li>
+      <li><strong>PayPal</strong> (pagos de la versión completa): <a href="https://www.paypal.com/myaccount/privacy/privacyhub">Declaración de privacidad de PayPal</a>. PayPal procesa el pago y tus datos de pago según su propia política.</li>
+      <li><strong>Meta / Instagram</strong>, <strong>TikTok</strong> y <strong>Google / YouTube</strong> reciben lo que publicas por sus API, según sus propias políticas.</li>
+    </ul>
+
+    <h2>6. Datos de YouTube y de Google</h2>
+    <p>La App usa los <strong>servicios de la API de YouTube</strong>. Al conectar YouTube aceptas los <a href="https://www.youtube.com/t/terms">Términos del servicio de YouTube</a>, y lo que hace Google con tus datos lo cubre la <a href="https://policies.google.com/privacy?hl=es">Política de privacidad de Google</a>. Puedes retirar el acceso de la App cuando quieras en los <a href="https://myaccount.google.com/permissions">permisos de tu cuenta de Google</a>.</p>
+    <p>El uso y la transferencia que hace Pixel Agent Department de la información recibida de las API de Google cumplen la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de API de Google</a>, incluidos los requisitos de uso limitado. No usamos los datos de YouTube para publicidad, no los vendemos, no los lee ninguna persona (salvo con tu permiso para darte soporte, por seguridad o por ley) y no los usamos para entrenar modelos de IA.</p>
+
+    <h2>7. Cuánto tiempo se guardan</h2>
+    <ul>
+      <li>En tu PC: hasta que desconectas la cuenta (se borra el token) o borras la carpeta de la App.</li>
+      <li>Los números de las oficinas se vuelven a pedir a cada red cuando las abres.</li>
+      <li>En nuestro servidor: la ficha y los contadores, mientras uses la App; los borramos si lo pides (ver <a href="borrar-datos.html#es">Borrar datos</a>).</li>
+      <li>Datos de las compras: mientras exista tu licencia y el tiempo que las normas fiscales y contables nos obliguen a guardar la prueba de la venta. Si nos pides borrar tus datos, los separamos de tu instalación, pero el registro del pago se guarda ese tiempo. PayPal guarda sus propios registros según su política.</li>
+    </ul>
+
+    <h2>8. Lo que puedes hacer</h2>
+    <p>Puedes desconectar cada red en la App (<em>Cuentas → Desconectar</em>) y quitar el acceso en la propia red:</p>
+    <ul>
+      <li>Google / YouTube: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a></li>
+      <li>Instagram: app de Instagram → Configuración → <em>Permisos de sitios web</em> → <em>Apps y sitios web</em> → quitar «Pixel Agent Department»</li>
+      <li>TikTok: app de TikTok → Ajustes y privacidad → <em>Seguridad y permisos</em> → <em>Apps y servicios</em> → quitar «Pixel Agent Department»</li>
+    </ul>
+    <p>Puedes pedirnos ver, corregir o borrar los datos de nuestro servidor escribiendo a <a href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>. Instrucciones: <a href="borrar-datos.html#es">Borrar datos</a>.</p>
+
+    <h2>9. Seguridad</h2>
+    <p>Las conexiones usan HTTPS. Los tokens se cifran en tu PC. La base de datos y el almacén están cerrados al público (solo entran nuestras funciones del servidor), y los secretos de la App están en Google Secret Manager.</p>
+
+    <h2>10. Menores</h2>
+    <p>La App no está dirigida a menores de 13 años, e Instagram, TikTok y YouTube tienen sus propias edades mínimas. No conectes cuentas que no tengas permiso para gestionar.</p>
+
+    <h2>11. Cambios</h2>
+    <p>Si esta política cambia, actualizaremos esta página y su fecha. Los cambios importantes también se avisarán en la App.</p>
+
+    <h2>12. Contacto</h2>
+    <p>GetComponent Studio, República Dominicana. Correo: <a href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>.</p>
+  </article>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <nav aria-label="Legal">
+      <a href="terminos.html">Terms of Service · Términos</a>
+      <a href="terminos-venta.html">Terms of Sale · Términos de venta</a>
+      <a href="privacidad.html">Privacy Policy · Privacidad</a>
+      <a href="borrar-datos.html">Data deletion · Borrar datos</a>
+    </nav>
+    © 2026 GetComponent Studio. Instagram, TikTok and YouTube are trademarks of their owners; this game is not affiliated with or endorsed by them.
+  </div>
+</footer>
+</body>
+</html>
