@@ -78,3 +78,9 @@
   .wsh__art, .phone, .phone__live i { animation: none; }
   .rv { opacity: 1; transform: none; transition: none; }
 }
+
+.wsh__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 26px 0 0; }
+.wsh__cta .btn-ios { font-size: 16px; padding: 14px 24px; }
+.wsh__cta .btn-soon { padding: 13px 18px; }
+.wsh__soon { margin-top: 16px; }
+.cta__links .btn-ios { align-self: auto; }

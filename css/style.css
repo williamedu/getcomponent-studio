@@ -345,3 +345,21 @@ ul { list-style: none; }
   .wall { min-height: 0; }
   .wall__phone { width: 120px; margin: 0 0 6px; }
 }
+
+/* Wallsmith poster v3: big phone breaking out of the frame + store buttons */
+.wall { overflow: visible; min-height: clamp(380px, 36vw, 460px); margin-top: clamp(70px, 8vw, 120px); }
+.wall__art, .wall__shade { border-radius: inherit; }
+.wall:hover .wall__art { transform: none; }
+.wall__phone { width: clamp(170px, 18vw, 270px); padding: 7px; border-radius: 34px; align-self: flex-start; margin-top: clamp(-120px, -7vw, -60px); margin-right: clamp(24px, 6vw, 96px); }
+.wall__phone video { border-radius: 28px; }
+.wall__notch { top: 12px; height: 7px; }
+.wall__live { font-size: 10px; padding: 5px 12px; bottom: -13px; }
+.wall__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.wall__cta .store { margin: 0; }
+.btn-ios { display: inline-flex; align-items: center; gap: 9px; padding: 11px 20px; border-radius: 12px; background: #ffd08a; color: #1a0e06; font-weight: 800; font-size: 14px; box-shadow: 0 6px 24px rgba(255, 154, 61, .35); transition: transform .25s var(--ease), box-shadow .25s; }
+.btn-ios:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(255, 154, 61, .55); }
+.btn-soon { display: inline-flex; align-items: center; padding: 10px 16px; border-radius: 12px; border: 1px dashed rgba(255, 208, 138, .5); color: #d9c3a0; font: 600 12px/1 "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; cursor: default; }
+@media (max-width: 760px) {
+  .wall { margin-top: 90px; min-height: 0; }
+  .wall__phone { width: 170px; margin: -90px 0 8px; align-self: center; }
+}
