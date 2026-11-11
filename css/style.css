@@ -331,3 +331,17 @@ ul { list-style: none; }
   .wall__copy { align-self: stretch; }
 }
 @media (prefers-reduced-motion: reduce) { .wall__phone, .wall__live i { transition: none; animation: none; } }
+
+/* Wallsmith poster: compact */
+.wall { min-height: clamp(300px, 32vw, 420px); }
+.wall__copy { padding: clamp(20px, 3vw, 40px); max-width: 520px; }
+.wall__copy h3 { font-size: clamp(38px, 5vw, 68px); margin-bottom: 12px; }
+.wall__copy p { margin-bottom: 16px; }
+.wall__phone { width: clamp(110px, 11vw, 150px); padding: 5px; border-radius: 22px; margin-right: clamp(24px, 7vw, 110px); }
+.wall__phone video { border-radius: 18px; }
+.wall__notch { top: 8px; height: 5px; }
+.wall__live { font-size: 8px; padding: 4px 9px; bottom: -10px; }
+@media (max-width: 760px) {
+  .wall { min-height: 0; }
+  .wall__phone { width: 120px; margin: 0 0 6px; }
+}
