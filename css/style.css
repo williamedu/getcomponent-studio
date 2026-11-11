@@ -388,3 +388,11 @@ ul { list-style: none; }
 html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
 .wall__cta { gap: 0 6px; margin-bottom: 14px; }
 @media (max-width: 760px) { .badge--gp { margin-left: -6px; } .badge--gp img { height: 56px; } .badge--ios img { height: 40px; } }
+
+/* badges in app cards */
+.stores--badges { align-items: center; gap: 0 4px; margin-top: 4px; }
+.stores--badges .badge--ios img { height: 40px; }
+.badge--gp-on { cursor: pointer; margin-left: -8px; }
+.badge--gp-on img { height: 58px; opacity: 1; filter: none; }
+.badge--gp-on:hover { transform: translateY(-3px); transition: transform .25s var(--ease); }
+.app--wide .stores--badges { gap: 0 4px; }
