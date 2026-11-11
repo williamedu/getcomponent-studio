@@ -24,7 +24,7 @@
     'kok.f3t': 'Explore and solve', 'kok.f3': 'Puzzles, inventory and secrets.',
     'kok.f4t': 'Environmental story', 'kok.f4': 'The world tells you what happened.',
     'mob.eyebrow': 'Mobile games · iOS and Android', 'mob.title': 'Short sessions. One more round.',
-    'wall.tag': 'Coming soon',
+    'wall.tag': 'Coming soon', 'wall.more': 'See the game →',
     'wall.lead': 'Turn-based strategy in pixel art. Reach the goal first and slow your rival down with walls, but you can never close off their whole path.',
     'wall.c1': '10 campaign levels', 'wall.c2': '5 game modes', 'wall.c3': 'Boss: the Golem', 'wall.c4': 'Up to 4 players',
     'duck.sub': 'One-tap arcade',

@@ -313,3 +313,21 @@ ul { list-style: none; }
 .pad__top .card__icon { margin-bottom: 0; }
 .pad__redes { display: flex; gap: 10px; }
 .pad__redes img { width: 36px; height: 36px; image-rendering: pixelated; }
+
+/* Wallsmith poster: phone with gameplay */
+.wall { justify-content: space-between; }
+.wall__phone { position: relative; flex: none; align-self: center; width: clamp(170px, 19vw, 250px); aspect-ratio: 480 / 854; margin-right: clamp(24px, 6vw, 96px); padding: 7px; border-radius: 34px; background: linear-gradient(160deg, #3a2a1c, #120a05); border: 1px solid rgba(255, 154, 61, .55); box-shadow: 0 30px 80px rgba(0, 0, 0, .7), 0 0 0 6px rgba(0, 0, 0, .25), 0 0 90px rgba(255, 154, 61, .28); transform: rotate(4deg); transition: transform .6s var(--ease), box-shadow .6s var(--ease); }
+.wall:hover .wall__phone { transform: rotate(0) translateY(-8px) scale(1.03); box-shadow: 0 40px 100px rgba(0, 0, 0, .8), 0 0 0 6px rgba(0, 0, 0, .25), 0 0 130px rgba(255, 154, 61, .45); }
+.wall__phone video { width: 100%; height: 100%; object-fit: cover; border-radius: 28px; image-rendering: pixelated; background: #0a1a0f; }
+.wall__notch { position: absolute; top: 13px; left: 50%; width: 30%; height: 7px; border-radius: 9px; background: #000; transform: translateX(-50%); z-index: 2; }
+.wall__live { position: absolute; left: 50%; bottom: -13px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px; border-radius: 99px; background: #1a0e06; border: 1px solid rgba(255, 154, 61, .6); color: var(--amber); font: 600 10px/1 "JetBrains Mono", monospace; letter-spacing: .16em; white-space: nowrap; }
+.wall__live i { width: 6px; height: 6px; border-radius: 50%; background: var(--red); animation: blink 1.4s infinite; }
+@keyframes blink { 50% { opacity: .25; } }
+.store--wall { display: inline-block; margin-top: 4px; border-color: var(--amber); color: #ffd08a; }
+.wall__copy { align-self: flex-end; }
+@media (max-width: 760px) {
+  .wall { flex-direction: column-reverse; align-items: center; justify-content: flex-end; padding-top: 28px; }
+  .wall__phone { width: 190px; margin: 0 0 8px; align-self: center; }
+  .wall__copy { align-self: stretch; }
+}
+@media (prefers-reduced-motion: reduce) { .wall__phone, .wall__live i { transition: none; animation: none; } }

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wallsmith — Estrategia por turnos en pixel art</title>
+<meta name="description" content="Wallsmith: estrategia por turnos en pixel art. Llega primero a la meta y frena a tu rival con muros. 10 niveles, 5 modos, el Golem y hasta 4 jugadores. iOS y Android.">
+<meta name="theme-color" content="#0c0603">
+<meta property="og:title" content="Wallsmith — GetComponent Studio">
+<meta property="og:description" content="Mueve, bloquea, gana. Estrategia por turnos en pixel art para iOS y Android.">
+<meta property="og:image" content="../assets/apps/wallsmith-art2.jpg">
+<link rel="icon" type="image/png" href="../assets/brand/frog.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="wallsmith.css">
+</head>
+<body class="ws">
+
+<header class="nav scrolled" id="nav">
+  <a class="nav__brand" href="../" aria-label="GetComponent Studio">
+    <img src="../assets/brand/frog.png" alt="" width="40" height="34">
+    <span><b>GET</b>COMPONENT <i>Studio</i></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="../#movil" data-i18n="nav.back">← Todos los juegos</a>
+    <a href="#modos" data-i18n="nav.modes">Modos</a>
+    <a href="#golem" data-i18n="nav.golem">El Golem</a>
+    <a href="#caracteristicas" data-i18n="nav.feat">Características</a>
+  </nav>
+  <button class="lang" id="lang" aria-label="Cambiar idioma / Switch language"><span class="on">ES</span><span>EN</span></button>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="wsh">
+  <img class="wsh__art" src="../assets/apps/wallsmith-art2.jpg" alt="" fetchpriority="high">
+  <div class="wsh__shade"></div>
+  <div class="wrap wsh__in">
+    <div class="wsh__copy">
+      <p class="tag tag--wall"><span class="dot"></span><span data-i18n="tag">Próximamente · iOS y Android</span></p>
+      <h1>Wallsmith</h1>
+      <p class="wsh__lead" data-i18n="lead">Estrategia por turnos en pixel art. Llega primero a la meta, pero tu rival puede cerrarte el paso con muros. Piensa dos pasos adelante.</p>
+      <ul class="chips">
+        <li data-i18n="c1">10 niveles de campaña</li>
+        <li data-i18n="c2">5 modos de juego</li>
+        <li data-i18n="c3">Jefe: el Golem</li>
+        <li data-i18n="c4">Hasta 4 jugadores</li>
+      </ul>
+      <p class="wsh__soon" data-i18n="soon">Se publica pronto en App Store y Google Play. Gratis con anuncios.</p>
+    </div>
+    <div class="phone">
+      <span class="phone__notch"></span>
+      <video src="../assets/wallsmith/wallsmith_showcase.mp4" autoplay muted loop playsinline preload="auto" poster="../assets/apps/wallsmith-art.jpg"></video>
+      <span class="phone__live"><i></i><span data-i18n="live">GAMEPLAY REAL</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO SE JUEGA -->
+<section class="wsec" id="como">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="how.eyebrow">Cómo se juega</p>
+    <h2 class="h2" data-i18n="how.title">Mueve. Bloquea. Gana.</h2>
+    <div class="steps">
+      <article><b>1</b><h3 data-i18n="s1t">Mueve</h3><p data-i18n="s1">Avanza tu peón hacia la fila contraria. El primero en llegar gana.</p></article>
+      <article><b>2</b><h3 data-i18n="s2t">Bloquea</h3><p data-i18n="s2">Arrastra muros al tablero para frenar al rival, pero nunca puedes cerrarle todo el camino.</p></article>
+      <article><b>3</b><h3 data-i18n="s3t">Gana estrellas</h3><p data-i18n="s3">Gana con menos turnos para conseguir las 3 estrellas y monedas para skins de muros.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- MODOS -->
+<section class="wsec wsec--alt" id="modos">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="modes.eyebrow">Campaña con varios formatos</p>
+    <h2 class="h2" data-i18n="modes.title">Cinco maneras de ganar.</h2>
+    <div class="modes">
+      <article><h3 data-i18n="m1t">Clásico</h3><p data-i18n="m1">Corre a la fila contraria.</p></article>
+      <article><h3 data-i18n="m2t">Bandera</h3><p data-i18n="m2">El primero en pisar la bandera del centro gana.</p></article>
+      <article><h3 data-i18n="m3t">Carrera</h3><p data-i18n="m3">Salen del mismo lado y el segundo en mover recibe muros extra.</p></article>
+      <article><h3 data-i18n="m4t">Cuatro jugadores</h3><p data-i18n="m4">Cuatro peones, un solo ganador.</p></article>
+      <article><h3 data-i18n="m5t">Cuatro vientos</h3><p data-i18n="m5">Cada uno sale de un lado hacia la bandera.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- GOLEM -->
+<section class="wsec golem" id="golem">
+  <div class="wrap golem__in">
+    <img src="../assets/apps/wallsmith-art.jpg" alt="El Golem de Wallsmith" loading="lazy">
+    <div>
+      <p class="eyebrow" data-i18n="golem.eyebrow">Jefe final</p>
+      <h2 class="h2" data-i18n="golem.title">Enfréntate al Golem.</h2>
+      <p data-i18n="golem.p">Cruza un tablero largo con dos ríos: solo se pasa por los puentes. Cada pocas rondas el Golem lanza bloques sobre el tablero. Esquívalos y llega antes que él.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARACTERÍSTICAS -->
+<section class="wsec wsec--alt" id="caracteristicas">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="feat.eyebrow">Características</p>
+    <h2 class="h2" data-i18n="feat.title">Hecho con cariño, píxel a píxel.</h2>
+    <ul class="feats">
+      <li data-i18n="f1">Arte pixel art y efectos de sonido cuidados</li>
+      <li data-i18n="f2">Rivales con IA que siempre buscan ganar</li>
+      <li data-i18n="f3">Poderes especiales: paso doble y muro doble</li>
+      <li data-i18n="f4">Monedas y estrellas en cada nivel</li>
+      <li data-i18n="f5">Skins de muros que se desbloquean con monedas</li>
+      <li data-i18n="f6">Progreso en la nube con tu cuenta de Google o Apple (opcional)</li>
+      <li data-i18n="f7">Gratis con anuncios; quítalos con el Pack Inicial</li>
+      <li data-i18n="f8">Disponible en 11 idiomas</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wsec cta">
+  <div class="wrap">
+    <h2 class="h2" data-i18n="cta.title">Muy pronto en tu móvil.</h2>
+    <p data-i18n="cta.p">¿Preguntas o ideas para Wallsmith? Escríbenos.</p>
+    <p class="cta__links">
+      <a class="store store--wall" href="mailto:getcomponentstudio@gmail.com">getcomponentstudio@gmail.com</a>
+      <a class="store" href="https://williamedu.github.io/wallrush-legal/soporte.html" target="_blank" rel="noopener" data-i18n="support">Soporte →</a>
+      <a class="store" href="../" data-i18n="cta.studio">Más juegos del estudio →</a>
+    </p>
+  </div>
+</section>
+</main>
+
+<footer class="footer wrap">
+  <span>© <span id="year">2026</span> GetComponent Studio</span>
+  <span data-i18n="footer.rights">Todas las marcas pertenecen a sus dueños.</span>
+  <nav class="footer__legal" aria-label="Legal">
+    <a href="../privacidad.html" data-i18n="footer.privacy">Política de privacidad</a>
+    <a href="../terminos.html" data-i18n="footer.terms">Términos del servicio</a>
+    <a href="../terminos-venta.html" data-i18n="footer.sale">Términos de venta</a>
+    <a href="../borrar-datos.html" data-i18n="footer.delete">Borrar mis datos</a>
+  </nav>
+</footer>
+
+<script>
+(() => {
+  const $$ = (s) => [...document.querySelectorAll(s)];
+  const en = {
+    'nav.back': '← All games', 'nav.modes': 'Modes', 'nav.golem': 'The Golem', 'nav.feat': 'Features',
+    'tag': 'Coming soon · iOS and Android',
+    'lead': 'Turn-based strategy in pixel art. Reach the goal first, but your rival can block your way with walls. Think two steps ahead.',
+    'c1': '10 campaign levels', 'c2': '5 game modes', 'c3': 'Boss: the Golem', 'c4': 'Up to 4 players',
+    'soon': 'Launching soon on the App Store and Google Play. Free with ads.', 'live': 'REAL GAMEPLAY',
+    'how.eyebrow': 'How to play', 'how.title': 'Move. Block. Win.',
+    's1t': 'Move', 's1': 'Advance your pawn to the opposite row. First to arrive wins.',
+    's2t': 'Block', 's2': "Drag walls onto the board to slow your rival, but you can never close off their whole path.",
+    's3t': 'Earn stars', 's3': 'Win in fewer turns for 3 stars, and collect coins for wall skins.',
+    'modes.eyebrow': 'Campaign with many formats', 'modes.title': 'Five ways to win.',
+    'm1t': 'Classic', 'm1': 'Race to the opposite row.',
+    'm2t': 'Flag', 'm2': 'First to step on the center flag wins.',
+    'm3t': 'Race', 'm3': 'Both start on the same side and the second to move gets extra walls.',
+    'm4t': 'Four players', 'm4': 'Four pawns, one winner.',
+    'm5t': 'Four winds', 'm5': 'Each one starts from a side toward the flag.',
+    'golem.eyebrow': 'Final boss', 'golem.title': 'Face the Golem.',
+    'golem.p': 'Cross a long board with two rivers: you can only pass over the bridges. Every few rounds the Golem throws blocks onto the board. Dodge them and arrive before it does.',
+    'feat.eyebrow': 'Features', 'feat.title': 'Made with love, pixel by pixel.',
+    'f1': 'Carefully crafted pixel art and sound effects', 'f2': 'AI rivals that always play to win',
+    'f3': 'Special powers: double step and double wall', 'f4': 'Coins and stars on every level',
+    'f5': 'Wall skins unlocked with coins', 'f6': 'Cloud progress with your Google or Apple account (optional)',
+    'f7': 'Free with ads; remove them with the Starter Pack', 'f8': 'Available in 11 languages',
+    'cta.title': 'Coming soon to your phone.', 'cta.p': 'Questions or ideas for Wallsmith? Write to us.',
+    'support': 'Support →', 'cta.studio': 'More games from the studio →',
+    'footer.rights': 'All trademarks belong to their owners.',
+    'footer.privacy': 'Privacy Policy', 'footer.terms': 'Terms of Service', 'footer.sale': 'Terms of Sale', 'footer.delete': 'Delete my data',
+  };
+  const nodes = $$('[data-i18n]');
+  const es = Object.fromEntries(nodes.map(n => [n.dataset.i18n, n.textContent]));
+  const setLang = (l) => {
+    const d = l === 'en' ? en : es;
+    nodes.forEach(n => { if (d[n.dataset.i18n]) n.textContent = d[n.dataset.i18n]; });
+    document.documentElement.lang = l;
+    $$('#lang span').forEach(s => s.classList.toggle('on', s.textContent.toLowerCase() === l));
+    try { localStorage.setItem('lang', l); } catch {}
+  };
+  let lang = 'es';
+  try { lang = localStorage.getItem('lang') || (navigator.language.startsWith('es') ? 'es' : 'en'); } catch {}
+  if (lang !== 'es') setLang(lang);
+  document.getElementById('lang').addEventListener('click', () => { lang = lang === 'es' ? 'en' : 'es'; setLang(lang); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+    $$('.steps article, .modes article, .feats li, .golem__in').forEach(el => { el.classList.add('rv'); io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
