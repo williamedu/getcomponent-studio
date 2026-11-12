@@ -230,7 +230,10 @@
         <p class="card__text" data-i18n="pad.text">Una oficina en pixel art que trabaja por ti en tus redes sociales. Sus empleados cortan tus videos largos en clips, les ponen subtítulos, escriben los títulos y las descripciones, y los publican en YouTube, Instagram y TikTok a la hora que elijas. También responden a quien comenta tus videos. Todo pasa en tu PC y nada se publica sin tu aprobación.</p>
         <div class="stores"><a class="store" href="pixel-agent-department.html" data-i18n="pad.more">Más información →</a><a class="store store--gp" href="privacidad.html" data-i18n="pad.privacy">Política de privacidad →</a><a class="store" href="terminos.html" data-i18n="pad.terms">Términos →</a></div>
       </div>
-      <img class="app__shot" src="assets/apps/pad-1.png" alt="Pixel Agent Department" loading="lazy">
+      <!-- Oficina animada: js/pad-office.js pone a los agentes pixel art encima de la captura -->
+      <div class="pad-stage" id="padStage">
+        <img class="app__shot" src="assets/apps/pad-1.png" alt="Pixel Agent Department" loading="lazy">
+      </div>
     </article>
     <article class="app reveal">
       <div class="app__copy">
@@ -311,5 +314,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/main.js" defer></script>
+<script src="js/pad-office.js" defer></script>
 </body>
 </html>
