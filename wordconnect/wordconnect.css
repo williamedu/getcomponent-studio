@@ -151,3 +151,25 @@
   .wphone, .chr, .sec-chr, .parade img { animation: none; }
   .rv { opacity: 1; transform: none; transition: none; }
 }
+
+/* larger body text */
+.wch__lead { font-size: clamp(18px, 1.7vw, 22px); }
+.wcs__lead { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.55; }
+.how h3, .mech h3 { font-size: 23px; }
+.how p, .mech p { font-size: 17.5px; line-height: 1.55; }
+.stats b { font-size: clamp(44px, 4.6vw, 62px); }
+.stats span { font-size: 18px; line-height: 1.45; color: #f0fffd; }
+.langs .tile { font-size: 17px; padding: 12px 18px; }
+.rew__list h3 { font-size: 21px; }
+.rew__list p { font-size: 17.5px; }
+.details div { font-size: 18px; }
+.wch__tiles .tile { font-size: 15px; }
+.board .tile { font-size: 13.5px; }
+@media (max-width: 760px) {
+  .how p, .mech p, .rew__list p { font-size: 16.5px; }
+  .stats span { font-size: 16px; }
+  .langs .tile { font-size: 15px; padding: 10px 14px; }
+  .board .tile { font-size: 11px; }
+}
+.wc .eyebrow { font-size: 14px; letter-spacing: .14em; }
+.wcs__lead { max-width: 760px; }
