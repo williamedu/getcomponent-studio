@@ -432,3 +432,35 @@ html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
 
 /* Duck Swing: "Más información" link on the card */
 .store--duck { display: inline-block; margin-top: 14px; border-color: #ffb347; color: #ffd39a; }
+
+/* Card backgrounds: scenery + characters from each game */
+.card__shot--land, .card__shot--video { position: relative; isolation: isolate; }
+.card__shot--land { background: linear-gradient(180deg, rgba(10, 30, 26, .05), rgba(10, 30, 26, .45)), url("../assets/duck/story-1.jpg") center 55% / cover; }
+.card__shot--land .lphone { z-index: 2; width: 80%; }
+.card__shot--video { background: radial-gradient(rgba(255, 255, 255, .16) 1.4px, transparent 1.6px) 0 0 / 22px 22px, radial-gradient(120% 90% at 80% 10%, #3f7bff, #2b63e3 40%, #1638a5 80%); }
+.card__shot--video video { position: relative; z-index: 2; }
+.deco { position: absolute; z-index: 3; pointer-events: none; height: auto; max-width: none; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .4)); animation: deco-bob 5s ease-in-out infinite; }
+.card__shot--land .deco { width: 58px; border-radius: 12px; }
+.card__shot--land .deco--a { left: 3%; bottom: 6%; }
+.card__shot--land .deco--b { right: 3%; bottom: 6%; animation-delay: -1.7s; }
+.card__shot--land .deco--c { right: 4%; top: 6%; width: 46px; animation-delay: -3.2s; }
+.card__shot--video .deco--a { width: 110px; left: 4%; bottom: 4%; }
+.card__shot--video .deco--b { width: 92px; right: 4%; top: 6%; animation-delay: -2.4s; }
+@keyframes deco-bob { 50% { translate: 0 -8px; } }
+.wtile { position: absolute; z-index: 1; padding: 7px 12px; border-radius: 10px; background: #fff; color: #1b2148; font: 900 12px/1 Montserrat, sans-serif; letter-spacing: .03em; box-shadow: 0 3px 0 #c9cfe6, 0 8px 16px rgba(0, 0, 0, .25); opacity: .9; }
+.wtile--g { background: #3fd25a; color: #0b3a14; box-shadow: 0 3px 0 #1f9a35, 0 8px 16px rgba(0, 0, 0, .25); }
+.wtile--y { background: #ffd23f; color: #4a3200; box-shadow: 0 3px 0 #d99a00, 0 8px 16px rgba(0, 0, 0, .25); }
+.wtile--1 { left: 8%; top: 12%; transform: rotate(-8deg); }
+.wtile--2 { left: 14%; top: 46%; transform: rotate(6deg); }
+.wtile--3 { right: 10%; top: 52%; transform: rotate(-5deg); }
+.wtile--4 { right: 7%; bottom: 12%; transform: rotate(7deg); }
+@media (max-width: 760px) {
+  .card__shot--land .deco { width: 34px; }
+  .card__shot--land .lphone { width: 84%; }
+  .card__shot--land .deco--c { display: none; }
+  .card__shot--video .deco--a { width: 74px; left: 2%; }
+  .card__shot--video .deco--b { width: 62px; right: 2%; }
+  .wtile { font-size: 10px; padding: 6px 9px; }
+  .wtile--2, .wtile--3, .wtile--4 { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .deco { animation: none; } }
