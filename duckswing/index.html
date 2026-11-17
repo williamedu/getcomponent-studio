@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duck Swing — Arcade de un toque</title>
+<meta name="description" content="Duck Swing: un toque, timing perfecto. Tu pato se balancea en una cuerda; suéltate en el momento justo y aterriza en la plataforma. Ruleta de buffs, patos coleccionables y ranking global. Gratis en iPhone y Android.">
+<meta name="theme-color" content="#f2733a">
+<meta property="og:title" content="Duck Swing — GetComponent Studio">
+<meta property="og:description" content="Un toque. Timing perfecto. Aterriza al pato. Gratis en iPhone y Android.">
+<meta property="og:image" content="https://getcomponentstudio.com/assets/duck/story-1.jpg">
+<link rel="icon" type="image/png" href="../assets/brand/frog.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=15">
+<link rel="stylesheet" href="duckswing.css?v=4">
+</head>
+<body class="dk">
+
+<header class="nav scrolled" id="nav">
+  <a class="nav__brand" href="../" aria-label="GetComponent Studio">
+    <img src="../assets/brand/frog.png" alt="" width="40" height="34">
+    <span><b>GET</b>COMPONENT <i>Studio</i></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="../#movil" data-i18n="nav.back">← Todos los juegos</a>
+    <a href="#historia" data-i18n="nav.story">Historia</a>
+    <a href="#ruleta" data-i18n="nav.wheel">Ruleta</a>
+    <a href="#patos" data-i18n="nav.ducks">Patos</a>
+  </nav>
+  <button class="lang" id="lang" aria-label="Cambiar idioma / Switch language"><span class="on">ES</span><span>EN</span></button>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="dkh">
+  <img class="dkh__sun" src="../assets/duck/sun.png" alt="">
+  <div class="wrap dkh__in">
+    <div>
+      <p class="tag tag--dk"><span class="dot"></span><span data-i18n="tag">Gratis en iPhone y Android</span></p>
+      <h1>Duck Swing</h1>
+      <img class="dkh__logo" src="../assets/duck/logo.png" alt="Duck Swing">
+      <p class="dkh__tagline" data-i18n="tagline">Un toque. Timing perfecto. Aterriza al pato.</p>
+      <p class="dkh__lead" data-i18n="lead">Tu pato se balancea en una cuerda como un péndulo. Toca para soltarte, vuela con la gravedad y aterriza en la plataforma. Si fallas, se acaba la partida.</p>
+      <div class="dkh__cta">
+        <a class="badge badge--ios" href="https://apps.apple.com/us/app/duck-swing-one-tap-reflex/id6797552479" target="_blank" rel="noopener" aria-label="Descargar Duck Swing en App Store"><img class="b-es" src="../assets/badges/appstore-es.svg" alt="Descárgalo en el App Store" height="52"><img class="b-en" src="../assets/badges/appstore-en.svg" alt="Download on the App Store" height="52"></a>
+        <a class="badge badge--gp" href="https://play.google.com/store/apps/details?id=com.getcomponentstudio.swingduck" target="_blank" rel="noopener" aria-label="Descargar Duck Swing en Google Play"><img class="b-es" src="../assets/badges/googleplay-es.png" alt="Disponible en Google Play" height="74"><img class="b-en" src="../assets/badges/googleplay-en.png" alt="Get it on Google Play" height="74"></a>
+      </div>
+      <p class="dkh__note" data-i18n="note">Partidas cortas · Reflejos puros · Gratis</p>
+    </div>
+    <div class="dkh__stage">
+      <div class="pend" aria-hidden="true"><img src="../assets/duck/skins/duck_1.png" alt=""></div>
+      <div class="lph">
+        <span class="lph__notch"></span>
+        <video src="../assets/duck/duck-demo-60.mp4" poster="../assets/duck/duck-demo-60-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Duck Swing en juego"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="dks dks--teal" id="historia">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="story.eyebrow">La historia</p>
+    <h2 class="h2" data-i18n="story.title">Una tarde que lo cambió todo.</h2>
+    <div class="story">
+      <figure><img src="../assets/duck/story-1.jpg" alt="El pato y sus amigos en el estanque" loading="lazy"><figcaption data-i18n="st1">Una tarde tranquila en el estanque con todos sus amigos.</figcaption></figure>
+      <figure><img src="../assets/duck/story-2.jpg" alt="El pato sigue a una luciérnaga" loading="lazy"><figcaption data-i18n="st2">Nuestro pato se aleja un momento siguiendo a una luciérnaga…</figcaption></figure>
+      <figure><img src="../assets/duck/story-3.jpg" alt="Un cazador atrapa a los patos en una red" loading="lazy"><figcaption data-i18n="st3">…y un cazador atrapa a todos sus amigos en una red.</figcaption></figure>
+      <figure><img src="../assets/duck/story-4.jpg" alt="Los patos enjaulados en el campamento" loading="lazy"><figcaption data-i18n="st4">Ahora están enjaulados en el campamento. Solo él puede ayudarlos.</figcaption></figure>
+    </div>
+    <p class="story__end" data-i18n="story.end">Es hora de balancearse al rescate.</p>
+  </div>
+</section>
+
+<!-- CÓMO SE JUEGA -->
+<section class="dks dks--sunset" id="como">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#fff3c4" data-i18n="how.eyebrow">Cómo se juega</p>
+    <h2 class="h2" data-i18n="how.title">Toca. Vuela. Aterriza.</h2>
+    <p class="dks__lead" data-i18n="how.lead">Controles de un solo toque: todo depende de soltarte en el momento justo.</p>
+    <div class="how3">
+      <article><img src="../assets/duck/pendulumicon.png" alt="" loading="lazy"><h3 data-i18n="h1t">Suéltate a tiempo</h3><p data-i18n="h1">Toca para soltar la cuerda en el momento justo del balanceo.</p></article>
+      <article><img src="../assets/duck/buff_snoperlanding.png" alt="" loading="lazy"><h3 data-i18n="h2t">Aterriza al centro</h3><p data-i18n="h2">Cae en la plataforma para sumar puntos; en el centro es un aterrizaje Perfecto.</p></article>
+      <article><img src="../assets/duck/p2points.png" alt="" loading="lazy"><h3 data-i18n="h3t">Encadena combos</h3><p data-i18n="h3">Varios Perfectos seguidos dan combos y rachas de fuego.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- DESAFÍO SIN FIN -->
+<section class="dks dks--night" id="desafio">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="end.eyebrow">Un desafío arcade sin fin</p>
+    <h2 class="h2" data-i18n="end.title">Cuanto más lejos, más difícil.</h2>
+    <p class="dks__lead" style="color:#d6d3f2" data-i18n="end.lead">La partida no termina mientras sigas aterrizando. Pero el juego no te lo pondrá fácil.</p>
+    <div class="track">
+      <article><img src="../assets/duck/pendulumicon.png" alt="" loading="lazy"><b>20</b><h3 data-i18n="t1t">Más velocidad</h3><p data-i18n="t1">El balanceo se vuelve más rápido.</p></article>
+      <article><img src="../assets/duck/platformmoving.png" alt="" loading="lazy"><b>40</b><h3 data-i18n="t2t">Plataformas en movimiento</h3><p data-i18n="t2">Las plataformas empiezan a moverse.</p></article>
+      <article><img src="../assets/duck/lasersimagesymbol.png" alt="" loading="lazy"><b>60</b><h3 data-i18n="t3t">Cañones láser</h3><p data-i18n="t3">Aparecen los láseres: esquívalos y sobrevive.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- RULETA -->
+<section class="dks dks--sunset" id="ruleta">
+  <div class="wrap wheel">
+    <div class="wheel__wrap">
+      <span class="wheel__pin"></span>
+      <div class="wheel__spin" aria-hidden="true">
+        <img style="--r:22.5deg" src="../assets/duck/buff_timestopper.png" alt="">
+        <img style="--r:67.5deg" src="../assets/duck/buff_biggerplatforms.png" alt="">
+        <img style="--r:112.5deg" src="../assets/duck/buff_5pointsnextlanding.png" alt="">
+        <img style="--r:157.5deg" src="../assets/duck/buff_onelive.png" alt="">
+        <img style="--r:202.5deg" src="../assets/duck/p2points.png" alt="">
+        <img style="--r:247.5deg" src="../assets/duck/buff_snoperlanding.png" alt="">
+        <img style="--r:292.5deg" src="../assets/duck/pendulumicon.png" alt="">
+        <img style="--r:337.5deg" src="../assets/duck/buff_biggerplatforms.png" alt="">
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow" style="color:#fff3c4" data-i18n="wh.eyebrow">Lucky Duck Wheel</p>
+      <h2 class="h2" data-i18n="wh.title">Gira la ruleta. Gana poderes.</h2>
+      <p class="dks__lead" data-i18n="wh.lead">8 buffs distintos para llegar más lejos en cada partida.</p>
+      <div class="buffs">
+        <div><img src="../assets/duck/buff_timestopper.png" alt="" loading="lazy"><span data-i18n="bf1">Cámara lenta</span></div>
+        <div><img src="../assets/duck/buff_biggerplatforms.png" alt="" loading="lazy"><span data-i18n="bf2">Plataformas más grandes</span></div>
+        <div><i>🪢</i><span data-i18n="bf3">Cuerda más larga</span></div>
+        <div><img src="../assets/duck/p2points.png" alt="" loading="lazy"><span data-i18n="bf4">Puntos x2</span></div>
+        <div><img src="../assets/duck/buff_5pointsnextlanding.png" alt="" loading="lazy"><span data-i18n="bf5">Puntos x5</span></div>
+        <div><img src="../assets/duck/buff_onelive.png" alt="" loading="lazy"><span data-i18n="bf6">Vida extra</span></div>
+      </div>
+      <p class="buffs__more" data-i18n="bf.more">…y más sorpresas en la ruleta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PATOS -->
+<section class="dks dks--leaf" id="patos">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#fff3c4" data-i18n="col.eyebrow">Colecciona patos</p>
+    <h2 class="h2" data-i18n="col.title">Desbloquea a toda la bandada.</h2>
+    <p class="dks__lead" data-i18n="col.lead">Desbloquea y colecciona skins de patos, y presume a tus favoritos.</p>
+  </div>
+  <div class="flock" aria-hidden="true">
+    <div class="flock__row"><img src="../assets/duck/skins/duck_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_mask_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_mask_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_4.png" alt="" loading="lazy"></div>
+    <div class="flock__row flock__row--rev"><img src="../assets/duck/skins/duck_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_mask_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_mask_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_arrow_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_core_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_dotted_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_girl_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_haired_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_hero_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_knight_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_leap_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_mask_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_mask_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_pablo_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_shawn_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_soldier_6.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_5.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_spotoneye_7.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_2.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_tigris_4.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_1.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_3.png" alt="" loading="lazy"><img src="../assets/duck/skins/duck_zip_5.png" alt="" loading="lazy"></div>
+  </div>
+  <div class="wrap"><p class="dks__count"><b>94</b> <span data-i18n="col.count">patos para coleccionar.</span></p></div>
+</section>
+
+<!-- RANKING + CTA -->
+<section class="dks dks--teal" id="ranking">
+  <div class="wrap board2">
+    <div>
+      <p class="eyebrow" data-i18n="lb.eyebrow">Ranking global</p>
+      <h2 class="h2" data-i18n="lb.title">Compite con el mundo.</h2>
+      <p class="dks__lead" data-i18n="lb.lead">Mide tu puntuación con jugadores de todo el mundo, con tu nombre y la bandera de tu país.</p>
+    </div>
+    <div class="rank" aria-hidden="true">
+      <div><span>1</span><img src="../assets/duck/skins/duck_hero_1.png" alt=""><span>🇩🇴 TÚ</span><em>87</em></div>
+      <div><span>2</span><img src="../assets/duck/skins/duck_knight_2.png" alt=""><span>🇲🇽 Player</span><em>81</em></div>
+      <div><span>3</span><img src="../assets/duck/skins/duck_girl_3.png" alt=""><span>🇪🇸 Player</span><em>76</em></div>
+      <div><span>4</span><img src="../assets/duck/skins/duck_tigris_1.png" alt=""><span>🇺🇸 Player</span><em>70</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="dks dks--sunset dkcta">
+  <div class="wrap">
+    <img class="dkcta__art" src="../assets/duck/art.jpg" alt="Duck Swing" loading="lazy">
+    <h2 class="h2" data-i18n="cta.title">¿Puedes superar tu récord?</h2>
+    <p class="dks__lead" style="margin-inline:auto" data-i18n="cta.lead">Un arcade perfecto para pausas cortas. Gratis en iPhone y Android.</p>
+    <div class="dkcta__links">
+      <a class="badge badge--ios" href="https://apps.apple.com/us/app/duck-swing-one-tap-reflex/id6797552479" target="_blank" rel="noopener" aria-label="Descargar Duck Swing en App Store"><img class="b-es" src="../assets/badges/appstore-es.svg" alt="Descárgalo en el App Store" height="52"><img class="b-en" src="../assets/badges/appstore-en.svg" alt="Download on the App Store" height="52"></a>
+      <a class="badge badge--gp" href="https://play.google.com/store/apps/details?id=com.getcomponentstudio.swingduck" target="_blank" rel="noopener" aria-label="Descargar Duck Swing en Google Play"><img class="b-es" src="../assets/badges/googleplay-es.png" alt="Disponible en Google Play" height="74"><img class="b-en" src="../assets/badges/googleplay-en.png" alt="Get it on Google Play" height="74"></a>
+    </div>
+    <a class="store" href="../" data-i18n="cta.studio">Más juegos del estudio →</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer wrap">
+  <span>© <span id="year">2026</span> GetComponent Studio</span>
+  <span data-i18n="footer.rights">Todas las marcas pertenecen a sus dueños.</span>
+  <nav class="footer__legal" aria-label="Legal">
+    <a href="../privacidad.html" data-i18n="footer.privacy">Política de privacidad</a>
+    <a href="../terminos.html" data-i18n="footer.terms">Términos del servicio</a>
+    <a href="../terminos-venta.html" data-i18n="footer.sale">Términos de venta</a>
+    <a href="../borrar-datos.html" data-i18n="footer.delete">Borrar mis datos</a>
+  </nav>
+</footer>
+
+<script>
+(() => {
+  const $$ = (s) => [...document.querySelectorAll(s)];
+  const en = {
+    'nav.back': '← All games', 'nav.story': 'Story', 'nav.wheel': 'Wheel', 'nav.ducks': 'Ducks',
+    'tag': 'Free on iPhone and Android', 'tagline': 'One tap. Perfect timing. Land the duck.',
+    'lead': 'Your duck swings on a rope like a pendulum. Tap to let go, fly with gravity and land on the platform. Miss, and it’s game over.',
+    'note': 'Short runs · Pure reflex · Free',
+    'story.eyebrow': 'The story', 'story.title': 'One afternoon changed everything.',
+    'st1': 'A quiet afternoon at the pond with all his friends.',
+    'st2': 'Our duck wanders off for a moment, following a firefly…',
+    'st3': '…and a hunter catches all his friends in a net.',
+    'st4': 'Now they are caged at the camp. Only he can help them.',
+    'story.end': 'Time to swing to the rescue.',
+    'how.eyebrow': 'How to play', 'how.title': 'Tap. Fly. Land.', 'how.lead': 'One-tap controls: everything depends on letting go at the right moment.',
+    'h1t': 'Let go on time', 'h1': 'Tap to release the rope at just the right point of the swing.',
+    'h2t': 'Land in the centre', 'h2': 'Land on the platform to score; hit the centre for a Perfect landing.',
+    'h3t': 'Chain combos', 'h3': 'Several Perfects in a row give combos and fire streaks.',
+    'end.eyebrow': 'An endless arcade challenge', 'end.title': 'The further you go, the harder it gets.',
+    'end.lead': 'The run never ends while you keep landing. But the game won’t make it easy.',
+    't1t': 'More speed', 't1': 'The swing gets faster.', 't2t': 'Moving platforms', 't2': 'Platforms start moving.',
+    't3t': 'Laser cannons', 't3': 'Lasers appear: dodge them and survive.',
+    'wh.eyebrow': 'Lucky Duck Wheel', 'wh.title': 'Spin the wheel. Win power-ups.', 'wh.lead': '8 different buffs to get further every run.',
+    'bf1': 'Slow motion', 'bf2': 'Bigger platforms', 'bf3': 'Longer rope', 'bf4': '2x points', 'bf5': '5x points', 'bf6': 'Extra life',
+    'bf.more': '…and more surprises on the wheel.',
+    'col.eyebrow': 'Collect ducks', 'col.title': 'Unlock the whole flock.', 'col.lead': 'Unlock and collect duck skins, and show off your favourites.',
+    'col.count': 'ducks to collect.',
+    'lb.eyebrow': 'Global leaderboard', 'lb.title': 'Compete with the world.',
+    'lb.lead': 'Measure your score against players around the world, with your name and your country’s flag.',
+    'cta.title': 'Can you beat your high score?', 'cta.lead': 'A perfect arcade game for quick breaks. Free on iPhone and Android.',
+    'cta.studio': 'More games from the studio →',
+    'footer.rights': 'All trademarks belong to their owners.',
+    'footer.privacy': 'Privacy Policy', 'footer.terms': 'Terms of Service', 'footer.sale': 'Terms of Sale', 'footer.delete': 'Delete my data',
+  };
+  const nodes = $$('[data-i18n]');
+  const es = Object.fromEntries(nodes.map(n => [n.dataset.i18n, n.textContent]));
+  const setLang = (l) => {
+    const d = l === 'en' ? en : es;
+    nodes.forEach(n => { if (d[n.dataset.i18n]) n.textContent = d[n.dataset.i18n]; });
+    document.documentElement.lang = l;
+    $$('#lang span').forEach(s => s.classList.toggle('on', s.textContent.toLowerCase() === l));
+    try { localStorage.setItem('lang', l); } catch {}
+  };
+  let lang = 'es';
+  try { lang = localStorage.getItem('lang') || (navigator.language.startsWith('es') ? 'es' : 'en'); } catch {}
+  if (lang !== 'es') setLang(lang);
+  document.getElementById('lang').addEventListener('click', () => { lang = lang === 'es' ? 'en' : 'es'; setLang(lang); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+    $$('.story figure, .how3 article, .track article, .buffs div, .rank').forEach(el => { el.classList.add('rv'); io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

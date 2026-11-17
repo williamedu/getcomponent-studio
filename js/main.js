@@ -27,7 +27,7 @@
     'wall.tag': 'Available on the App Store', 'wall.more': 'See the game →', 
     'wall.lead': 'Turn-based strategy in pixel art. Reach the goal first and slow your rival down with walls.',
     'wall.c1': '45 levels', 'wall.c2': '3 bosses', 'wall.c3': 'Online', 'gp.soon': 'Coming soon',
-    'duck.sub': 'One-tap arcade',
+    'duck.sub': 'One-tap arcade', 'duck.more': 'Learn more →',
     'duck.text': 'Your duck swings like a pendulum. Tap to let go, fly and land on the platform. Chain perfect landings.',
     'word.sub': 'Word puzzle · 11 languages',
     'word.text': 'Sort the words into hidden groups. Find out what connects them and complete every row. 50 levels in 11 languages.', 'word.more': 'Learn more →',

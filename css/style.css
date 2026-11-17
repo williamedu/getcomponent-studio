@@ -429,3 +429,6 @@ html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
 .lphone video { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; background: #17302c; }
 .lphone__notch { position: absolute; left: 4px; top: 50%; width: 6px; height: 26%; border-radius: 6px; background: #000; transform: translateY(-50%); z-index: 2; }
 @media (max-width: 760px) { .card__shot--land { height: 190px; padding: 0 10px; } .lphone { padding: 6px 10px; border-radius: 22px; } .lphone video { border-radius: 14px; } }
+
+/* Duck Swing: "Más información" link on the card */
+.store--duck { display: inline-block; margin-top: 14px; border-color: #ffb347; color: #ffd39a; }
