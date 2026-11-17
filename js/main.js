@@ -3,6 +3,14 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.app--video').forEach(card => {
+    const v = card.querySelector('video');
+    const play = () => v.play().catch(() => {});
+    const stop = () => { v.pause(); v.currentTime = 0; };
+    card.addEventListener('mouseenter', play);
+    card.addEventListener('mouseleave', stop);
+    card.addEventListener('click', e => { if (e.target.closest('a')) return; v.paused ? play() : stop(); });
+  });
 
   /* ---------- i18n: Spanish lives in the HTML, English here ---------- */
   const en = {
@@ -34,7 +42,7 @@
     'apps.eyebrow': 'Beyond games', 'apps.title': 'We also build useful apps.',
     'kero.sub': 'Income and expense tracker',
     'kero.text': 'Track your money without friction and see where it goes each month. Personal finance made simple.',
-    'ede.sub': 'Power outages in the Dominican Republic',
+    'ede.more': 'Learn more →', 'ede.sub': 'Power outages in the Dominican Republic',
     'ede.text': 'Scheduled outages from Edeeste, Edesur and Edenorte in one app, with alerts before each one.',
     'studio.eyebrow': 'The studio', 'studio.title': 'A small team with big games in mind.',
     'studio.p1': 'GetComponent Studio is an independent studio founded by William Hiciano. We started out building real-life simulators and today we make everything from a control tower to a dark fantasy kingdom.',

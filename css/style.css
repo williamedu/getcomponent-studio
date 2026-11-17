@@ -464,3 +464,9 @@ html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
   .wtile--2, .wtile--3, .wtile--4 { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .deco { animation: none; } }
+
+/* EDETODOS: square promo video, plays on hover */
+.app--video { grid-template-columns: 1fr 250px; }
+.app__phone--video { height: 250px; width: 250px; object-fit: cover; border-radius: 18px 18px 0 0; background: #0a0d14; cursor: pointer; }
+.store--ede { display: inline-block; margin-top: 14px; border-color: #ffc83d; color: #ffe08a; }
+@media (max-width: 640px) { .app--video { grid-template-columns: 1fr; } .app__phone--video { width: 100%; height: auto; aspect-ratio: 1; } }
