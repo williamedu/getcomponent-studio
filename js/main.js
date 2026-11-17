@@ -4,12 +4,16 @@
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('.app--video').forEach(card => {
-    const v = card.querySelector('video');
-    const play = () => v.play().catch(() => {});
+    const v = card.querySelector('video'), btn = card.querySelector('.snd');
+    const sync = () => { btn.setAttribute('aria-pressed', String(!v.muted)); btn.classList.toggle('is-on', !v.muted); };
+    const play = () => v.play().catch(() => { v.muted = true; sync(); v.play().catch(() => {}); });
     const stop = () => { v.pause(); v.currentTime = 0; };
-    card.addEventListener('mouseenter', play);
-    card.addEventListener('mouseleave', stop);
-    card.addEventListener('click', e => { if (e.target.closest('a')) return; v.paused ? play() : stop(); });
+    const hover = matchMedia('(hover: hover)');
+    sync();
+    card.addEventListener('mouseenter', () => { if (hover.matches) { v.muted = false; sync(); play(); } });
+    card.addEventListener('mouseleave', () => { if (hover.matches) { stop(); v.muted = true; sync(); } });
+    btn.addEventListener('click', e => { e.stopPropagation(); v.muted = !v.muted; sync(); if (v.paused) play(); });
+    card.addEventListener('click', e => { if (e.target.closest('a,button')) return; v.paused ? play() : stop(); });
   });
 
   /* ---------- i18n: Spanish lives in the HTML, English here ---------- */

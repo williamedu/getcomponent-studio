@@ -466,7 +466,10 @@ html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
 @media (prefers-reduced-motion: reduce) { .deco { animation: none; } }
 
 /* EDETODOS: square promo video, plays on hover */
-.app--video { grid-template-columns: 1fr 250px; }
-.app__phone--video { height: 250px; width: 250px; object-fit: cover; border-radius: 18px 18px 0 0; background: #0a0d14; cursor: pointer; }
+.app--video { grid-template-columns: 1fr 300px; padding-bottom: 28px; align-items: center; }
+.app__media { position: relative; width: 300px; aspect-ratio: 1; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.5); cursor: pointer; }
+.app__phone--video { display: block; width: 100%; height: 100%; object-fit: cover; background: #0a0d14; }
+.snd { position: absolute; right: 10px; bottom: 10px; width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgba(0,0,0,.6); color: #fff; backdrop-filter: blur(6px); cursor: pointer; }
+.snd .snd__on { display: none; } .snd.is-on .snd__on { display: inline; } .snd.is-on .snd__off { display: none; }
 .store--ede { display: inline-block; margin-top: 14px; border-color: #ffc83d; color: #ffe08a; }
-@media (max-width: 640px) { .app--video { grid-template-columns: 1fr; } .app__phone--video { width: 100%; height: auto; aspect-ratio: 1; } }
+@media (max-width: 640px) { .app--video { grid-template-columns: 1fr; } .app__media { width: 100%; } }
