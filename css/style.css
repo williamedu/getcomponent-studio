@@ -422,3 +422,10 @@ html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
 
 /* Word Connect: "Más información" link on the card */
 .store--word { display: inline-block; margin-top: 14px; border-color: #ffd23f; color: #ffe27a; }
+
+/* Duck Swing: gameplay video in a landscape phone */
+.card__shot--land { height: 360px; background: radial-gradient(120% 120% at 50% 0%, #2f5a4f, #17302c 70%); padding: 0 18px; }
+.lphone { position: relative; width: 100%; max-width: 560px; aspect-ratio: 1080 / 498; padding: 8px 14px; border-radius: 30px; background: #0b0f0d; border: 2px solid rgba(255, 255, 255, .28); box-shadow: 0 20px 44px rgba(0, 0, 0, .5), 0 0 0 6px rgba(255, 255, 255, .05); transform: rotate(-2deg); }
+.lphone video { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; background: #17302c; }
+.lphone__notch { position: absolute; left: 4px; top: 50%; width: 6px; height: 26%; border-radius: 6px; background: #000; transform: translateY(-50%); z-index: 2; }
+@media (max-width: 760px) { .card__shot--land { height: 190px; padding: 0 10px; } .lphone { padding: 6px 10px; border-radius: 22px; } .lphone video { border-radius: 14px; } }
