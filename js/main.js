@@ -13,8 +13,10 @@
     card.addEventListener('mouseenter', () => { if (hover.matches) { v.muted = false; sync(); play(); } });
     card.addEventListener('mouseleave', () => { if (hover.matches) { stop(); v.muted = true; sync(); } });
     btn.addEventListener('click', e => { e.stopPropagation(); v.muted = !v.muted; sync(); if (v.paused) play(); });
-    card.addEventListener('click', e => { if (e.target.closest('a,button')) return; v.paused ? play() : stop(); });
+    card.addEventListener('click', e => { if (e.target.closest('a,button')) return; if (hover.matches) { window.open('https://edetodos.com/', '_blank', 'noopener'); return; } v.paused ? play() : stop(); });
   });
+
+  document.querySelectorAll('.card__shot[data-href]').forEach(el => el.addEventListener('click', () => { location.href = el.dataset.href; }));
 
   /* ---------- i18n: Spanish lives in the HTML, English here ---------- */
   const en = {

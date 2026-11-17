@@ -473,3 +473,13 @@ html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
 .snd .snd__on { display: none; } .snd.is-on .snd__on { display: inline; } .snd.is-on .snd__off { display: none; }
 .store--ede { display: inline-block; margin-top: 14px; border-color: #ffc83d; color: #ffe08a; }
 @media (max-width: 640px) { .app--video { grid-template-columns: 1fr; } .app__media { width: 100%; } }
+
+/* title + media links, matched store badges, orange hover on both */
+.card h3 a, .app h3 a, .wall h3 a { color: inherit; text-decoration: none; transition: color .2s; }
+.card h3 a:hover, .app h3 a:hover, .wall h3 a:hover { color: var(--amber, #ff9a3d); }
+.card__shot[data-href] { cursor: pointer; }
+.stores--badges .badge--ios img { height: 44px; }
+.wall__cta .badge--ios img { height: 47px; }
+.badge--ios, .badge--gp-on { transition: transform .25s var(--ease), filter .25s; }
+.badge--ios:hover, .badge--gp-on:hover { transform: translateY(-3px); filter: drop-shadow(0 8px 18px rgba(255, 154, 61, .55)); }
+@media (max-width: 760px) { .stores--badges .badge--ios img { height: 43px; } .wall__cta .badge--ios img { height: 43px; } }
