@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Connect — Puzzle de palabras en 11 idiomas</title>
+<meta name="description" content="Word Connect: ordena las palabras en grupos ocultos, descubre qué las une y completa cada fila. 50 niveles en 11 idiomas. Gratis en iPhone y Android.">
+<meta name="theme-color" content="#2b63e3">
+<meta property="og:title" content="Word Connect — GetComponent Studio">
+<meta property="og:description" content="Ordena las palabras en grupos ocultos. 50 niveles en 11 idiomas, gratis en iPhone y Android.">
+<meta property="og:image" content="https://getcomponentstudio.com/assets/wordconnect/shot-1.jpg">
+<link rel="icon" type="image/png" href="../assets/brand/frog.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=11">
+<link rel="stylesheet" href="wordconnect.css?v=3">
+</head>
+<body class="wc">
+
+<header class="nav scrolled" id="nav">
+  <a class="nav__brand" href="../" aria-label="GetComponent Studio">
+    <img src="../assets/brand/frog.png" alt="" width="40" height="34">
+    <span><b>GET</b>COMPONENT <i>Studio</i></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="../#movil" data-i18n="nav.back">← Todos los juegos</a>
+    <a href="#como" data-i18n="nav.how">Cómo se juega</a>
+    <a href="#idiomas" data-i18n="nav.langs">11 idiomas</a>
+    <a href="#recompensas" data-i18n="nav.rew">Recompensas</a>
+  </nav>
+  <button class="lang" id="lang" aria-label="Cambiar idioma / Switch language"><span class="on">ES</span><span>EN</span></button>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="wch">
+  <div class="wrap wch__in">
+    <div>
+      <p class="tag tag--wc"><span class="dot"></span><span data-i18n="tag">Gratis en iPhone y Android</span></p>
+      <h1>Word <span>Connect</span></h1>
+      <p class="wch__lead" data-i18n="lead">Ordena las palabras en grupos ocultos. Descubre qué las une y completa cada fila antes de pasar al siguiente nivel.</p>
+      <div class="wch__tiles">
+        <span class="tile" data-i18n="c1">50 niveles</span>
+        <span class="tile tile--green" data-i18n="c2">11 idiomas</span>
+        <span class="tile" data-i18n="c3">Pistas con llaves</span>
+        <span class="tile tile--yellow" data-i18n="c4">Ruleta de la Suerte</span>
+      </div>
+      <div class="wch__cta">
+        <a class="badge badge--ios" href="https://apps.apple.com/us/app/word-connect-guess-categories/id6759536019" target="_blank" rel="noopener" aria-label="Descargar Word Connect en App Store"><img class="b-es" src="../assets/badges/appstore-es.svg" alt="Descárgalo en el App Store" height="52"><img class="b-en" src="../assets/badges/appstore-en.svg" alt="Download on the App Store" height="52"></a>
+        <a class="badge badge--gp" href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Word_Combiner" target="_blank" rel="noopener" aria-label="Descargar Word Connect en Google Play"><img class="b-es" src="../assets/badges/googleplay-es.png" alt="Disponible en Google Play" height="74"><img class="b-en" src="../assets/badges/googleplay-en.png" alt="Get it on Google Play" height="74"></a>
+      </div>
+      <p class="wch__note" data-i18n="note">Gratis, con anuncios y compras opcionales</p>
+    </div>
+    <div class="wch__stage">
+      <img class="chr chr--a" src="../assets/wordconnect/char-1.png" alt="">
+      <img class="chr chr--b" src="../assets/wordconnect/char-3.png" alt="">
+      <img class="chr chr--c" src="../assets/wordconnect/char-7.png" alt="">
+      <div class="wphone">
+        <span class="wphone__notch"></span>
+        <video src="../assets/apps/word-demo-60.mp4" poster="../assets/apps/word-demo-60-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Word Connect en juego"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO SE JUEGA -->
+<section class="wcs wcs--purple" id="como">
+  <img class="sec-chr sec-chr--br" src="../assets/wordconnect/char-4.png" alt="">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="how.eyebrow">¿Cómo se juega?</p>
+    <h2 class="h2" data-i18n="how.title">Encuentra la conexión.</h2>
+    <p class="wcs__lead" data-i18n="how.lead">Cada nivel es un tablero de palabras mezcladas. Cada palabra pertenece a un grupo oculto: países, ropa, postres, profesiones…</p>
+    <div class="how">
+      <article><b>1</b><h3 data-i18n="h1t">Mira el tablero</h3><p data-i18n="h1">Las palabras están mezcladas. Busca cuáles tienen algo en común.</p></article>
+      <article><b>2</b><h3 data-i18n="h2t">Muévelas</h3><p data-i18n="h2">Toca dos palabras para intercambiarlas, o arrástralas a su lugar.</p></article>
+      <article><b>3</b><h3 data-i18n="h3t">Completa la fila</h3><p data-i18n="h3">Junta las 4 palabras de un grupo en una fila: se ilumina en verde y revela la categoría.</p></article>
+      <article><b>4</b><h3 data-i18n="h4t">Pasa de nivel</h3><p data-i18n="h4">Completa todas las filas para avanzar al siguiente tablero.</p></article>
+    </div>
+    <div class="board" aria-hidden="true">
+      <span class="tile tile--yellow board__row" data-i18n="b.cat">Postres dulces</span>
+      <span class="tile tile--green" data-i18n="b1">Flan</span><span class="tile tile--green" data-i18n="b2">Pastel</span><span class="tile tile--green" data-i18n="b3">Helado</span><span class="tile tile--green" data-i18n="b4">Galleta</span>
+      <span class="tile" data-i18n="b5">Chef</span><span class="tile" data-i18n="b6">México</span><span class="tile" data-i18n="b7">Falda</span><span class="tile" data-i18n="b8">Silla</span>
+      <span class="tile" data-i18n="b9">Gorra</span><span class="tile" data-i18n="b10">Japón</span><span class="tile" data-i18n="b11">Mesa</span><span class="tile" data-i18n="b12">Médico</span>
+    </div>
+  </div>
+</section>
+
+<!-- MECÁNICAS -->
+<section class="wcs wcs--navy" id="mecanicas">
+  <img class="sec-chr sec-chr--tr" src="../assets/wordconnect/char-8.png" alt="">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="mech.eyebrow">Mecánicas especiales</p>
+    <h2 class="h2" data-i18n="mech.title">No todo es lo que parece.</h2>
+    <p class="wcs__lead" data-i18n="mech.lead">Más allá de agrupar palabras, cada tablero puede esconder una sorpresa.</p>
+    <div class="mech">
+      <article><i>🔗</i><h3 data-i18n="m1t">Grupos que se fusionan</h3><p data-i18n="m1">Algunos grupos, al resolverse, se convierten en un icono que pasa a formar parte de otra categoría.</p></article>
+      <article><i>✨</i><h3 data-i18n="m2t">Palabras ocultas</h3><p data-i18n="m2">Al resolver ciertas filas aparecen palabras nuevas en el tablero.</p></article>
+      <article><i>🔑</i><h3 data-i18n="m3t">Pistas con llaves</h3><p data-i18n="m3">¿Atascado? Usa una llave para colorear las palabras de un mismo grupo.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- CAPTURAS -->
+<section class="wcs wcs--blue" id="capturas">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="shots.eyebrow">Capturas</p>
+    <h2 class="h2" data-i18n="shots.title">Colorido de principio a fin.</h2>
+    <div class="shots">
+      <img src="../assets/wordconnect/shot-1.jpg" alt="Encuentra la conexión" loading="lazy">
+      <img src="../assets/wordconnect/shot-2.jpg" alt="Completa cada categoría" loading="lazy">
+      <img src="../assets/wordconnect/shot-3.jpg" alt="Usa una pista" loading="lazy">
+      <img src="../assets/wordconnect/shot-4.jpg" alt="Gana monedas en cada nivel" loading="lazy">
+      <img src="../assets/wordconnect/shot-5.jpg" alt="Gira la ruleta" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- CONTENIDO + IDIOMAS -->
+<section class="wcs wcs--teal" id="idiomas">
+  <img class="sec-chr sec-chr--tr" src="../assets/wordconnect/char-6.png" alt="">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="cont.eyebrow">Contenido</p>
+    <h2 class="h2" data-i18n="cont.title">Mucho por descubrir.</h2>
+    <p class="wcs__lead" data-i18n="cont.lead">Dificultad progresiva: cada nivel te pide pensar un poco más.</p>
+    <div class="stats">
+      <div><b>50</b><span data-i18n="st1">niveles más un tutorial</span></div>
+      <div><b>24</b><span data-i18n="st2">palabras por tablero, en 6 grupos</span></div>
+      <div><b>36</b><span data-i18n="st3">palabras en niveles especiales, en 9 grupos</span></div>
+      <div><b>11</b><span data-i18n="st4">idiomas con niveles propios</span></div>
+    </div>
+    <h3 class="h2" style="font-size:clamp(26px,3vw,38px)" data-i18n="langs.title">Juega en tu idioma.</h3>
+    <div class="langs">
+      <span class="tile">Español</span><span class="tile">English</span><span class="tile">Português</span><span class="tile">Français</span><span class="tile">Deutsch</span><span class="tile">Italiano</span><span class="tile">Русский</span><span class="tile">中文</span><span class="tile">日本語</span><span class="tile">한국어</span><span class="tile">العربية</span>
+    </div>
+    <p class="wcs__lead" data-i18n="langs.p">Cada idioma tiene sus propios niveles, con palabras y categorías pensadas para ese idioma.</p>
+  </div>
+</section>
+
+<!-- RECOMPENSAS -->
+<section class="wcs wcs--orange" id="recompensas">
+  <div class="wrap rew">
+    <div>
+      <p class="eyebrow" style="color:#fff3c4" data-i18n="rew.eyebrow">Recompensas</p>
+      <h2 class="h2" data-i18n="rew.title">Juega, gana y gira.</h2>
+      <div class="rew__list">
+        <div><i>🪙</i><div><h3 data-i18n="r1t">Monedas en cada nivel</h3><p data-i18n="r1">Gana monedas al completar cada nivel, y puedes duplicarlas.</p></div></div>
+        <div><i>🎡</i><div><h3 data-i18n="r2t">Ruleta de la Suerte</h3><p data-i18n="r2">Un giro gratis cada 6 horas: gana monedas o llaves.</p></div></div>
+        <div><i>🛒</i><div><h3 data-i18n="r3t">Tienda</h3><p data-i18n="r3">Cambia tus monedas por paquetes de llaves.</p></div></div>
+      </div>
+    </div>
+    <div class="rew__img">
+      <img src="../assets/wordconnect/shot-5.jpg" alt="Ruleta de la Suerte" loading="lazy">
+      <img class="chr" src="../assets/wordconnect/char-wolf.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- DETALLES + CTA -->
+<section class="wcs wcs--pink wcta">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#ffe0f1" data-i18n="det.eyebrow">Detalles</p>
+    <h2 class="h2" data-i18n="cta.title">Descárgalo gratis hoy.</h2>
+    <div class="details">
+      <div data-i18n="d1">Gratis, con anuncios y compras opcionales.</div>
+      <div data-i18n="d2">Tu progreso se guarda solo, incluso a mitad de un nivel.</div>
+      <div data-i18n="d3">Disponible en iPhone y Android.</div>
+    </div>
+    <div class="wcta__links">
+      <a class="badge badge--ios" href="https://apps.apple.com/us/app/word-connect-guess-categories/id6759536019" target="_blank" rel="noopener" aria-label="Descargar Word Connect en App Store"><img class="b-es" src="../assets/badges/appstore-es.svg" alt="Descárgalo en el App Store" height="52"><img class="b-en" src="../assets/badges/appstore-en.svg" alt="Download on the App Store" height="52"></a>
+      <a class="badge badge--gp" href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Word_Combiner" target="_blank" rel="noopener" aria-label="Descargar Word Connect en Google Play"><img class="b-es" src="../assets/badges/googleplay-es.png" alt="Disponible en Google Play" height="74"><img class="b-en" src="../assets/badges/googleplay-en.png" alt="Get it on Google Play" height="74"></a>
+    </div>
+    <a class="store" href="../" data-i18n="cta.studio">Más juegos del estudio →</a>
+    <div class="parade" aria-hidden="true">
+      <img src="../assets/wordconnect/char-2.png" alt=""><img src="../assets/wordconnect/char-4.png" alt=""><img src="../assets/wordconnect/char-5.png" alt=""><img src="../assets/wordconnect/char-6.png" alt=""><img src="../assets/wordconnect/char-8.png" alt=""><img src="../assets/wordconnect/char-3.png" alt=""><img src="../assets/wordconnect/char-1.png" alt="">
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer wrap">
+  <span>© <span id="year">2026</span> GetComponent Studio</span>
+  <span data-i18n="footer.rights">Todas las marcas pertenecen a sus dueños.</span>
+  <nav class="footer__legal" aria-label="Legal">
+    <a href="../privacidad.html" data-i18n="footer.privacy">Política de privacidad</a>
+    <a href="../terminos.html" data-i18n="footer.terms">Términos del servicio</a>
+    <a href="../terminos-venta.html" data-i18n="footer.sale">Términos de venta</a>
+    <a href="../borrar-datos.html" data-i18n="footer.delete">Borrar mis datos</a>
+  </nav>
+</footer>
+
+<script>
+(() => {
+  const $$ = (s) => [...document.querySelectorAll(s)];
+  const en = {
+    'nav.back': '← All games', 'nav.how': 'How to play', 'nav.langs': '11 languages', 'nav.rew': 'Rewards',
+    'tag': 'Free on iPhone and Android',
+    'lead': 'Sort the words into hidden groups. Find out what connects them and complete every row to reach the next level.',
+    'c1': '50 levels', 'c2': '11 languages', 'c3': 'Key hints', 'c4': 'Lucky Wheel',
+    'note': 'Free, with ads and optional purchases',
+    'how.eyebrow': 'How to play', 'how.title': 'Find the connection.',
+    'how.lead': 'Each level is a board of mixed-up words. Every word belongs to a hidden group: countries, clothes, desserts, jobs…',
+    'h1t': 'Read the board', 'h1': 'The words are mixed up. Look for the ones that have something in common.',
+    'h2t': 'Move them', 'h2': 'Tap two words to swap them, or drag them into place.',
+    'h3t': 'Complete the row', 'h3': 'Put the 4 words of a group in one row: it lights up green and reveals the category.',
+    'h4t': 'Level up', 'h4': 'Complete every row to move on to the next board.',
+    'b.cat': 'Sweet desserts', 'b1': 'Flan', 'b2': 'Cake', 'b3': 'Ice cream', 'b4': 'Cookie',
+    'b5': 'Chef', 'b6': 'Mexico', 'b7': 'Skirt', 'b8': 'Chair', 'b9': 'Cap', 'b10': 'Japan', 'b11': 'Table', 'b12': 'Doctor',
+    'mech.eyebrow': 'Special mechanics', 'mech.title': 'Not everything is what it seems.',
+    'mech.lead': 'Beyond grouping words, every board can hide a surprise.',
+    'm1t': 'Merging groups', 'm1': 'Some groups, once solved, turn into an icon that becomes part of another category.',
+    'm2t': 'Hidden words', 'm2': 'Solving certain rows reveals new words on the board.',
+    'm3t': 'Key hints', 'm3': 'Stuck? Use a key to colour the words that belong to the same group.',
+    'shots.eyebrow': 'Screenshots', 'shots.title': 'Colourful from start to finish.',
+    'cont.eyebrow': 'Content', 'cont.title': 'Plenty to discover.', 'cont.lead': 'Progressive difficulty: every level asks you to think a little more.',
+    'st1': 'levels plus a tutorial', 'st2': 'words per board, in 6 groups', 'st3': 'words in special levels, in 9 groups', 'st4': 'languages with their own levels',
+    'langs.title': 'Play in your language.', 'langs.p': 'Each language has its own levels, with words and categories made for that language.',
+    'rew.eyebrow': 'Rewards', 'rew.title': 'Play, win and spin.',
+    'r1t': 'Coins every level', 'r1': 'Earn coins for every level you complete, and double them.',
+    'r2t': 'Lucky Wheel', 'r2': 'A free spin every 6 hours: win coins or keys.',
+    'r3t': 'Shop', 'r3': 'Trade your coins for key packs.',
+    'det.eyebrow': 'Details', 'cta.title': 'Download it free today.',
+    'd1': 'Free, with ads and optional purchases.', 'd2': 'Your progress saves automatically, even in the middle of a level.', 'd3': 'Available on iPhone and Android.',
+    'cta.studio': 'More games from the studio →',
+    'footer.rights': 'All trademarks belong to their owners.',
+    'footer.privacy': 'Privacy Policy', 'footer.terms': 'Terms of Service', 'footer.sale': 'Terms of Sale', 'footer.delete': 'Delete my data',
+  };
+  const nodes = $$('[data-i18n]');
+  const es = Object.fromEntries(nodes.map(n => [n.dataset.i18n, n.textContent]));
+  const setLang = (l) => {
+    const d = l === 'en' ? en : es;
+    nodes.forEach(n => { if (d[n.dataset.i18n]) n.textContent = d[n.dataset.i18n]; });
+    document.documentElement.lang = l;
+    $$('#lang span').forEach(s => s.classList.toggle('on', s.textContent.toLowerCase() === l));
+    try { localStorage.setItem('lang', l); } catch {}
+  };
+  let lang = 'es';
+  try { lang = localStorage.getItem('lang') || (navigator.language.startsWith('es') ? 'es' : 'en'); } catch {}
+  if (lang !== 'es') setLang(lang);
+  document.getElementById('lang').addEventListener('click', () => { lang = lang === 'es' ? 'en' : 'es'; setLang(lang); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+    $$('.how article, .mech article, .stats div, .rew__list > div, .details div, .board').forEach(el => { el.classList.add('rv'); io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

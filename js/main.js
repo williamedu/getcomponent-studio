@@ -30,7 +30,7 @@
     'duck.sub': 'One-tap arcade',
     'duck.text': 'Your duck swings like a pendulum. Tap to let go, fly and land on the platform. Chain perfect landings.',
     'word.sub': 'Word puzzle · 11 languages',
-    'word.text': '16 words, 4 hidden groups. Find what links them before you run out of tries. New levels every day.',
+    'word.text': 'Sort the words into hidden groups. Find out what connects them and complete every row. 50 levels in 11 languages.', 'word.more': 'Learn more →',
     'apps.eyebrow': 'Beyond games', 'apps.title': 'We also build useful apps.',
     'kero.sub': 'Income and expense tracker',
     'kero.text': 'Track your money without friction and see where it goes each month. Personal finance made simple.',

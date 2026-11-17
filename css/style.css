@@ -419,3 +419,6 @@ html:not([lang="en"]) .b-en, html[lang="en"] .b-es { display: none; }
 .card__shot--video { height: 360px; align-items: center; }
 .card__shot--video video { height: 332px; width: auto; max-width: none; border-radius: 16px; border: 2px solid rgba(255,255,255,.35); box-shadow: 0 18px 40px rgba(0,0,0,.45); background: #0d2a7a; }
 @media (max-width: 760px) { .card__shot--video { height: 330px; } .card__shot--video video { height: 302px; } }
+
+/* Word Connect: "Más información" link on the card */
+.store--word { display: inline-block; margin-top: 14px; border-color: #ffd23f; color: #ffe27a; }
