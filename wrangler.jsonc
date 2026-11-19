@@ -8,6 +8,10 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page",
     "html_handling": "none",
-    "run_worker_first": ["/", "/wallsmith/", "/wordconnect/", "/duckswing/"]
-  }
+    "run_worker_first": ["/", "/wallsmith/", "/wordconnect/", "/duckswing/", "/estadisticas", "/estadisticas/", "/api/*"]
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "getcomponent-stats", "database_id": "c6fda962-de31-4030-afb3-fec91c4b01f6" }
+  ],
+  "observability": { "enabled": true }
 }

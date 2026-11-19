@@ -6,7 +6,8 @@
   document.querySelectorAll('.app--video').forEach(card => {
     const v = card.querySelector('video'), btn = card.querySelector('.snd');
     const sync = () => { btn.setAttribute('aria-pressed', String(!v.muted)); btn.classList.toggle('is-on', !v.muted); };
-    const play = () => v.play().catch(() => { v.muted = true; sync(); v.play().catch(() => {}); });
+    let visto = false;
+    const play = () => { if (!visto && window.edtEvento) { visto = true; window.edtEvento('abierto', 'Video EDETODOS'); } return v.play().catch(() => { v.muted = true; sync(); v.play().catch(() => {}); }); };
     const stop = () => { v.pause(); v.currentTime = 0; };
     const hover = matchMedia('(hover: hover)');
     sync();

@@ -7,3 +7,11 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
+/estadisticas/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+/api/*
+  X-Robots-Tag: noindex
+/t.js
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *

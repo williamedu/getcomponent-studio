@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /estadisticas/
+Disallow: /api/
 
 Sitemap: https://getcomponentstudio.com/sitemap.xml

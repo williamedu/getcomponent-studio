@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Estadísticas · GetComponent Studio</title>
+<style>
+  :root { --bg:#f6f7f9; --panel:#fff; --tx:#14181f; --mut:#68707d; --line:#e3e6eb; --ac:#3d8bff; --ac2:#ff9a3d; --bar:#dce8ff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b0e12; --panel:#141920; --tx:#eef1f5; --mut:#8a93a1; --line:#232a34; --ac:#5b9dff; --ac2:#ffa24f; --bar:#1d2b44; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--tx); font:15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width:1100px; margin:0 auto; padding:20px 16px 60px; }
+  header { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; margin-bottom:18px; }
+  h1 { font-size:20px; margin:0; }
+  .mut { color:var(--mut); font-size:13px; }
+  select, button, input { font:inherit; color:inherit; background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:8px 12px; }
+  button { cursor:pointer; }
+  .seg { display:inline-flex; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  .seg button { border:0; border-radius:0; border-right:1px solid var(--line); }
+  .seg button:last-child { border-right:0; }
+  .seg button[aria-pressed="true"] { background:var(--ac); color:#fff; }
+  .kpis { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:14px; }
+  .kpi, .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+  .kpi b { display:block; font-size:30px; line-height:1.1; margin-top:4px; font-variant-numeric:tabular-nums; }
+  .chart { display:flex; align-items:flex-end; gap:3px; height:150px; margin-top:10px; }
+  .chart button { flex:1; min-width:0; padding:0; border:0; border-radius:4px 4px 0 0; background:var(--ac); opacity:.85; position:relative; }
+  .chart button:hover, .chart button[aria-pressed="true"] { background:var(--ac2); opacity:1; }
+  .chart button.cero { background:var(--line); }
+  .axis { display:flex; justify-content:space-between; margin-top:6px; }
+  .bar-top { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+  .tools { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:14px 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap:12px; }
+  .card { min-width:0; }
+  .card h2 { font-size:15px; margin:0 0 10px; }
+  .row { position:relative; display:flex; justify-content:space-between; gap:10px; padding:5px 8px; margin:3px 0; border-radius:6px; overflow:hidden; }
+  .row i { position:absolute; inset:0 auto 0 0; background:var(--bar); z-index:0; }
+  .row span { position:relative; z-index:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .row span:last-child { font-variant-numeric:tabular-nums; flex:none; font-weight:600; }
+  .more { margin-top:8px; font-size:13px; padding:5px 10px; }
+  .empty { color:var(--mut); font-size:13px; }
+  #login { max-width:420px; margin:12vh auto; }
+  #login input { width:100%; margin:10px 0; }
+  select { max-width:100%; min-width:0; }
+  header > div { min-width:0; max-width:100%; }
+  .row span:first-child { min-width:0; }
+  [hidden] { display:none !important; }
+  @media (max-width:640px) { .kpis { grid-template-columns:1fr 1fr 1fr; gap:8px; } .kpi { padding:10px; } .kpi b { font-size:22px; } .grid { grid-template-columns:minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <form id="login" class="card" hidden>
+    <h1>Estadísticas privadas</h1>
+    <p class="mut" id="loginMsg">Pega tu clave para entrar.</p>
+    <input id="key" type="password" autocomplete="current-password" placeholder="Clave STATS_KEY" required>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <main id="app" hidden>
+    <header>
+      <div><h1>Estadísticas · GetComponent Studio</h1><div class="mut" id="sub"></div></div>
+      <div class="tools" style="margin:0">
+        <select id="host" aria-label="Subdominio"></select>
+        <button id="reload" type="button">Actualizar</button>
+      </div>
+    </header>
+
+    <section class="kpis">
+      <div class="kpi"><span class="mut">Hoy</span><b id="kHoy">0</b></div>
+      <div class="kpi"><span class="mut">Ayer</span><b id="kAyer">0</b></div>
+      <div class="kpi"><span class="mut">Este mes</span><b id="kMes">0</b></div>
+    </section>
+
+    <section class="card">
+      <div class="bar-top"><h2 style="margin:0">Personas distintas · últimos 30 días</h2><span class="mut" id="chartInfo">Toca una barra para ver ese día</span></div>
+      <div class="chart" id="chart"></div>
+      <div class="axis mut"><span id="ax0"></span><span id="ax1"></span></div>
+    </section>
+
+    <div class="tools">
+      <div class="seg" id="periodo">
+        <button type="button" data-p="hoy">Hoy</button>
+        <button type="button" data-p="ayer">Ayer</button>
+        <button type="button" data-p="7">7 días</button>
+        <button type="button" data-p="30" aria-pressed="true">30 días</button>
+      </div>
+      <span class="mut" id="perInfo"></span>
+    </div>
+
+    <section class="grid" id="cards"></section>
+    <p class="mut" style="margin-top:24px">Este navegador queda marcado para no contarse en ningún subdominio. Ábrelo una vez en cada navegador o teléfono que uses.</p>
+  </main>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  // Este navegador no se cuenta nunca (la cookie de dominio la pone /api/stats).
+  try { localStorage.setItem('noContar', '1'); } catch (e) {}
+
+  var $ = function (id) { return document.getElementById(id); };
+  var el = function (tag, cls, txt) { var n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+  var nf = new Intl.NumberFormat('es');
+  var paises; try { paises = new Intl.DisplayNames(['es'], { type: 'region' }); } catch (e) {}
+  var bandera = function (c) { return /^[A-Z]{2}$/.test(c) ? String.fromCodePoint.apply(null, c.split('').map(function (ch) { return 127397 + ch.charCodeAt(0); })) : '🏳️'; };
+  var nombrePais = function (c) { if (c === 'XX' || c === 'T1') return '🏳️ Desconocido / Tor'; var n = c; try { n = paises ? paises.of(c) : c; } catch (e) {} return bandera(c) + ' ' + n; };
+
+  var TARJETAS = [
+    ['clic', 'Clics'], ['abierto', 'Lo que abren'], ['busqueda', 'Lo que buscan'], ['busqueda_vacia', 'Búsquedas sin resultado'],
+    ['disp', 'Dispositivo'], ['so', 'Sistema'], ['pais', 'País'], ['origen', 'De dónde llegan'], ['pagina', 'Página de entrada']
+  ];
+
+  var clave = '', data = null, periodo = '30', diaSel = null, host = '*', abiertas = {};
+
+  function sumarDia(d, n) { var t = new Date(d + 'T12:00:00Z'); t.setUTCDate(t.getUTCDate() + n); return t.toISOString().slice(0, 10); }
+  function fechaCorta(d) { return new Date(d + 'T12:00:00Z').toLocaleDateString('es', { day: 'numeric', month: 'short', timeZone: 'UTC' }); }
+
+  function pedirClave(msg) {
+    $('app').hidden = true; $('login').hidden = false;
+    $('loginMsg').textContent = msg || 'Pega tu clave para entrar.';
+    $('key').focus();
+  }
+
+  function cargar() {
+    var q = host !== '*' ? '?host=' + encodeURIComponent(host) : '';
+    $('sub').textContent = 'Cargando…';
+    fetch('/api/stats' + q, { headers: { Authorization: 'Bearer ' + clave }, cache: 'no-store', credentials: 'same-origin' })
+      .then(function (r) {
+        if (r.status === 401) { try { sessionStorage.removeItem('statsKey'); } catch (e) {} throw { auth: true }; }
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (j) {
+        try { sessionStorage.setItem('statsKey', clave); } catch (e) {}
+        data = j; $('login').hidden = true; $('app').hidden = false; pintar();
+      })
+      .catch(function (e) { if (e && e.auth) pedirClave('Clave incorrecta. Inténtalo otra vez.'); else $('sub').textContent = 'Error al cargar: ' + (e.message || e); });
+  }
+
+  function pintar() {
+    var hoy = data.hoy, ayer = sumarDia(hoy, -1);
+    $('sub').textContent = 'Hoy es ' + hoy + ' (hora de RD) · ' + (host === '*' ? 'todo el dominio' : host);
+
+    var sel = $('host'); sel.textContent = '';
+    var o = el('option', null, 'Todos (personas distintas en todo el dominio)'); o.value = '*'; sel.appendChild(o);
+    data.hosts.forEach(function (h) { var op = el('option', null, h); op.value = h; sel.appendChild(op); });
+    sel.value = host;
+
+    var porDia = {}; data.dias.forEach(function (r) { porDia[r.dia] = r.n; });
+    $('kHoy').textContent = nf.format(porDia[hoy] || 0);
+    $('kAyer').textContent = nf.format(porDia[ayer] || 0);
+    var mes = data.meses.filter(function (m) { return m.mes === hoy.slice(0, 7); })[0];
+    $('kMes').textContent = nf.format(mes ? mes.n : 0);
+
+    var ch = $('chart'); ch.textContent = '';
+    var dias = []; for (var i = 29; i >= 0; i--) dias.push(sumarDia(hoy, -i));
+    var max = Math.max.apply(null, dias.map(function (d) { return porDia[d] || 0; }).concat([1]));
+    dias.forEach(function (d) {
+      var n = porDia[d] || 0, b = el('button');
+      b.type = 'button';
+      b.style.height = Math.max(3, n / max * 100) + '%';
+      if (!n) b.className = 'cero';
+      b.title = fechaCorta(d) + ': ' + nf.format(n) + ' personas';
+      b.setAttribute('aria-label', b.title);
+      b.setAttribute('aria-pressed', String(diaSel === d));
+      b.onclick = function () { diaSel = diaSel === d ? null : d; pintar(); };
+      ch.appendChild(b);
+    });
+    $('ax0').textContent = fechaCorta(dias[0]); $('ax1').textContent = fechaCorta(hoy);
+
+    var desde, hasta = hoy, txt;
+    if (diaSel) { desde = hasta = diaSel; txt = 'Día ' + fechaCorta(diaSel) + ' (toca la barra otra vez para quitar el filtro)'; }
+    else if (periodo === 'hoy') { desde = hoy; txt = 'Hoy'; }
+    else if (periodo === 'ayer') { desde = hasta = ayer; txt = 'Ayer'; }
+    else { desde = sumarDia(hoy, -(+periodo - 1)); txt = 'Últimos ' + periodo + ' días'; }
+    $('perInfo').textContent = txt;
+    [].forEach.call($('periodo').children, function (b) { b.setAttribute('aria-pressed', String(!diaSel && b.dataset.p === periodo)); });
+
+    var tot = {};
+    data.eventos.forEach(function (e) {
+      if (e.dia < desde || e.dia > hasta) return;
+      var t = tot[e.tipo] || (tot[e.tipo] = {});
+      t[e.valor] = (t[e.valor] || 0) + e.n;
+    });
+
+    var cards = $('cards'); cards.textContent = '';
+    TARJETAS.forEach(function (tc) {
+      var tipo = tc[0], c = el('div', 'card');
+      c.appendChild(el('h2', null, tc[1]));
+      var filas = Object.keys(tot[tipo] || {}).map(function (k) { return [k, tot[tipo][k]]; }).sort(function (a, b) { return b[1] - a[1]; });
+      if (!filas.length) { c.appendChild(el('div', 'empty', 'Sin datos en este período.')); cards.appendChild(c); return; }
+      var top = filas[0][1], todas = abiertas[tipo];
+      (todas ? filas : filas.slice(0, 8)).forEach(function (f) {
+        var r = el('div', 'row'), barra = el('i');
+        barra.style.width = (f[1] / top * 100) + '%';
+        r.appendChild(barra);
+        r.appendChild(el('span', null, tipo === 'pais' ? nombrePais(f[0]) : f[0]));
+        r.appendChild(el('span', null, nf.format(f[1])));
+        c.appendChild(r);
+      });
+      if (filas.length > 8) {
+        var m = el('button', 'more', todas ? 'Ver menos' : 'Ver todo (' + filas.length + ')');
+        m.type = 'button'; m.onclick = function () { abiertas[tipo] = !todas; pintar(); };
+        c.appendChild(m);
+      }
+      cards.appendChild(c);
+    });
+  }
+
+  $('periodo').addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; periodo = b.dataset.p; diaSel = null; pintar(); });
+  $('host').addEventListener('change', function () { host = this.value; diaSel = null; cargar(); });
+  $('reload').addEventListener('click', cargar);
+  $('login').addEventListener('submit', function (e) { e.preventDefault(); clave = $('key').value.trim(); if (clave) cargar(); });
+
+  // La clave llega en el fragmento (#clave) para que no quede en registros del servidor; luego se borra de la barra.
+  var frag = decodeURIComponent(location.hash.slice(1));
+  if (frag) { clave = frag; history.replaceState(null, '', location.pathname); }
+  else { try { clave = sessionStorage.getItem('statsKey') || ''; } catch (e) {} }
+  if (clave) cargar(); else pedirClave();
+})();
+</script>
+</body>
+</html>
